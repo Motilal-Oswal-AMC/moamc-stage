@@ -143,10 +143,14 @@ export default function decorate(block) {
     block.appendChild(rightarrow);
     const pagination = document.createElement('div');
     pagination.classList.add('swiper-pagination');
-    block.appendChild(pagination);
+    const navigationWrap = document.createElement('div');
+    navigationWrap.classList.add('navigate-wrap');
+    navigationWrap.append(leftarrow, pagination, rightarrow);
+    // block.appendChild(pagination);
+    block.appendChild(navigationWrap);
     config = {
       slidesPerView: 'auto',
-      spaceBetween: 12,
+      // spaceBetween: 12,
       loop: true,
       navigation: {
         nextEl: block.querySelector('.swiper-button-next'),
@@ -160,11 +164,11 @@ export default function decorate(block) {
           return `<span class="${className}">${index + 1}</span>`;
         },
       },
-      breakpoints: {
-        769: {
-          spaceBetween: 16,
-        },
-      },
+      // breakpoints: {
+      //   769: {
+      //     spaceBetween: 16,
+      //   },
+      // },
     };
   }
   Swiper(block, config);
