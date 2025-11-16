@@ -314,10 +314,8 @@
   font-weight: 400;
   line-height: var(--body-medium-regular-line-height);
   font-feature-settings: var(--font-features-default);
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
   pointer-events: none;
+  padding-right: 11px;
 }
 @media (max-width: 768px) {
   .section.growth-now-container .growth-now .fund-us-container .fund-sec-4 form fieldset select {

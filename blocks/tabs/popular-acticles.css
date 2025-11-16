@@ -36,7 +36,6 @@
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
-  padding: 2px 0;
 }
 @media (max-width: 768px) {
   .popular-artical .default-content-wrapper h1,
@@ -205,16 +204,7 @@
   .popular-artical.learn-about.tabs-container .default-content-wrapper h6 {
     font-size: var(--sub-header-large-size);
     line-height: 28px;
-  }
-}
-@media (max-width: 768px) and (width <= 400px) {
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h1,
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h2,
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h3,
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h4,
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h5,
-  .popular-artical.learn-about.tabs-container .default-content-wrapper h6 {
-    padding: 0 56px;
+    margin-bottom: 24px;
   }
 }
 .popular-artical.learn-about.tabs-container .tabs .tabs-list {

@@ -523,6 +523,12 @@
   line-height: var(--heading-h4-line-height, 40px);
 }
 @media (max-width: 768px) {
+  .section.high-skin.moedge-skin-game .pms-high-skin1 .pms-high-skin-card-cont1 .pms-high-skin-card-subcont1 .cards-card-body h2 {
+    font-size: var(--heading-h5-size, 28px);
+    line-height: var(--sub-header-large-line-height, 32px);
+  }
+}
+@media (max-width: 768px) {
   .section.high-skin.moedge-skin-game .pms-high-skin1 .pms-high-skin-card-cont1 .pms-high-skin-card-subcont1 .cards-card-body h5 {
     font-size: var(--body-small-semibold-size);
     font-weight: 600;

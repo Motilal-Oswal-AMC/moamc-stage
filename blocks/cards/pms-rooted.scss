@@ -573,6 +573,11 @@ $breakpoint-tablet: 900px;
                         font-size: var(--heading-h4-size, 32px);
                         font-style: normal;
                         line-height: var(--heading-h4-line-height, 40px);
+
+                        @include media (mobile) {
+                            font-size: var(--heading-h5-size, 28px);
+                            line-height: var(--sub-header-large-line-height, 32px);
+                        }
                     }
 
                     h5 {
