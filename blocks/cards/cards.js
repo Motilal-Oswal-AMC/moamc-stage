@@ -185,7 +185,8 @@ export default function decorate(block) {
   // aif component end
 
   // // Investor Education article left and right wrapper
-  // if (window.location.href.includes('/investor-education/all-articles/') || window.location.href.includes('/motilal-oswal-edge/article-details')) {
+  // if (window.location.href.includes('/investor-education/all-articles/') 
+  // || window.location.href.includes('/motilal-oswal-edge/article-details')) {
   //   const maincloser = block.closest('main');
   //   const rightSub = maincloser.querySelectorAll('.article-sub-right');
   //   const rightarticle = maincloser.querySelector('.article-right-wrapper');
@@ -234,6 +235,23 @@ export default function decorate(block) {
     dataMapMoObj.addIndexed(calClass);
   }
   // cal class end
+
+  if (block.closest('main').querySelector('.behind-the-content')) {
+    // Find the container that has your special classes
+    const mainContainer = block.closest('main')
+      .querySelector('.behind-the-content .cards');
+
+    // Only run this pagination logic if we are in the correct block
+    if (mainContainer) {
+    // Select all the card items
+      const items = Array.from(mainContainer.querySelectorAll('li'));
+      const itemsPerPage = items.slice(0, 12).length;
+
+      if (items.length > itemsPerPage) {
+        dataMapMoObj.setupPagination(mainContainer, items, itemsPerPage);
+      }
+    }
+  }
 }
 
 function decorateArticlePage() {
