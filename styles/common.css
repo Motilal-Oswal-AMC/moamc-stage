@@ -625,6 +625,17 @@ main > .section.previous-studies-tab .tab-dropdown-wrap .tab-droplist .tabs-list
   line-height: 24px;
 }
 
+@media (max-width: 768px) {
+  .default-content-wrapper.annual-wealth-wrap1 h1,
+  .default-content-wrapper.annual-wealth-wrap1 h2,
+  .default-content-wrapper.annual-wealth-wrap1 h3,
+  .default-content-wrapper.annual-wealth-wrap1 h4,
+  .default-content-wrapper.annual-wealth-wrap1 h5,
+  .default-content-wrapper.annual-wealth-wrap1 h6 {
+    margin: 32px 0 24px 0;
+  }
+}
+
 .prev-main-wrapper {
   display: flex;
   gap: 16px;

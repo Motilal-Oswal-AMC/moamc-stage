@@ -18,21 +18,19 @@
   }
 
   .default-content-wrapper {
-    > p.download-ul1 {
+    >p.download-ul1 {
       font-style: normal;
       padding-bottom: 24px;
       margin: unset;
 
-      @include font-style(
-        var(--body-xlarge-bold-size),
+      @include font-style(var(--body-xlarge-bold-size),
         var(--body-xlarge-bold-line-height),
         var(--blue-1-800-primary),
         600,
-        var(--body)
-      );
+        var(--body));
     }
 
-    > ul.download-ul2 {
+    >ul.download-ul2 {
       display: flex;
       flex-direction: column;
       gap: 16px;
@@ -44,15 +42,15 @@
       }
 
       /* stylelint-disable-next-line no-descending-specificity */
-      > li.download-li1,
-      > li.download-li2,
-      > li.download-li3,
-      > li.download-li4,
-      > li.download-li5 {
+      >li.download-li1,
+      >li.download-li2,
+      >li.download-li3,
+      >li.download-li4,
+      >li.download-li5 {
         list-style-type: none;
         height: 48px;
 
-        > ul.download-inner-ul1 {
+        >ul.download-inner-ul1 {
           list-style-type: none;
           display: flex;
           justify-content: space-between;
@@ -67,13 +65,11 @@
               padding: 0 16px 0 0;
               font-style: normal;
 
-              @include font-style(
-                var(--body-medium-medium-size),
+              @include font-style(var(--body-medium-medium-size),
                 var(--body-medium-medium-line-height),
                 var(--blue-1-800-primary),
                 500,
-                var(--body)
-              );
+                var(--body));
 
               &:focus-visible {
                 outline: 2px solid #2e2a94;
@@ -99,7 +95,7 @@
 
         // Icon logic for each list item
         @for $i from 1 through 5 {
-          &:nth-child(#{$i}) > ul.download-inner-ul1 > li.download-first-list1:first-child::before {
+          &:nth-child(#{$i})>ul.download-inner-ul1>li.download-first-list1:first-child::before {
             content: "";
             display: inline-block;
             width: 48px;
@@ -334,7 +330,7 @@
   padding: 0;
 }
 
-main > .section.previous-studies-tab {
+main>.section.previous-studies-tab {
   max-width: 1232px;
   width: 100%;
   margin: 0 auto;
@@ -557,6 +553,19 @@ main > .section.previous-studies-tab {
     }
   }
 }
+
+.default-content-wrapper.annual-wealth-wrap1 {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        @include media(mobile) {
+          margin: 32px 0 24px 0;
+        }
+      }
+    }
 
 .prev-main-wrapper {
   display: flex;
@@ -869,13 +878,11 @@ main > .section.previous-studies-tab {
                 gap: 8px;
                 text-decoration: none;
 
-                @include font-style(
-                  var(--button-small-size),
+                @include font-style(var(--button-small-size),
                   var(--button-small-line-height),
                   var(--text-white),
                   500,
-                  var(--body)
-                );
+                  var(--body));
 
                 @include media(mobile) {
                   font-size: 14px;
@@ -931,13 +938,11 @@ main > .section.previous-studies-tab {
                 gap: 4px;
                 text-decoration: none;
 
-                @include font-style(
-                  var(--body-xsmall-regular-size),
+                @include font-style(var(--body-xsmall-regular-size),
                   var(--body-xsmall-regular-line-height),
                   var(--neutrals-700),
                   400,
-                  var(--body)
-                );
+                  var(--body));
 
                 @include media(mobile) {
                   font-size: var(--paragraph-xsmall-regular-size);
@@ -964,13 +969,11 @@ main > .section.previous-studies-tab {
               gap: 4px;
               margin: 0;
 
-              @include font-style(
-                var(--body-xsmall-regular-size),
+              @include font-style(var(--body-xsmall-regular-size),
                 var(--body-xsmall-regular-line-height),
                 var(--neutrals-700),
                 400,
-                var(--body)
-              );
+                var(--body));
 
               @include media(mobile) {
                 font-size: var(--paragraph-xsmall-regular-size);
@@ -1029,13 +1032,11 @@ main > .section.previous-studies-tab {
                   gap: 8px;
                   cursor: pointer;
 
-                  @include font-style(
-                    var(--body-xsmall-regular-size),
+                  @include font-style(var(--body-xsmall-regular-size),
                     var(--body-xsmall-regular-line-height),
                     var(--text-body),
                     400,
-                    var(--body)
-                  );
+                    var(--body));
 
                   @include media(mobile) {
                     font-size: var(--paragraph-xsmall-size);
