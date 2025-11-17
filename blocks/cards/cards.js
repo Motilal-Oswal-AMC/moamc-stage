@@ -24,79 +24,79 @@ export default function decorate(block) {
   block.textContent = '';
   block.append(ulblk);
 
-  function setupAuthorListToggle() {
-    const sections = document.querySelectorAll('.behind-the-content.our-author-list');
-    sections.forEach((section) => {
-      const cardsBlock = section.querySelector('.cards.block');
-      if (!cardsBlock) return;
+  // function setupAuthorListToggle() {
+  //   const sections = document.querySelectorAll('.behind-the-content.our-author-list');
+  //   sections.forEach((section) => {
+  //     const cardsBlock = section.querySelector('.cards.block');
+  //     if (!cardsBlock) return;
 
-      const ul = cardsBlock.querySelector('ul');
-      if (!ul) return;
+  //     const ul = cardsBlock.querySelector('ul');
+  //     if (!ul) return;
 
-      const allItems = Array.from(ul.querySelectorAll('li'));
-      const SHOW_COUNT = 12;
+  //     const allItems = Array.from(ul.querySelectorAll('li'));
+  //     const SHOW_COUNT = 12;
 
-      if (allItems.length <= SHOW_COUNT) return;
+  //     if (allItems.length <= SHOW_COUNT) return;
 
-      const hiddenItems = allItems.slice(SHOW_COUNT);
-      hiddenItems.forEach((li) => li.classList.add('cards-card-hidden'));
+  //     const hiddenItems = allItems.slice(SHOW_COUNT);
+  //     hiddenItems.forEach((li) => li.classList.add('cards-card-hidden'));
 
-      let viewAllBtn = section.querySelector('.default-content-wrapper .button');
-      if (!viewAllBtn) {
-        const wrapper = section.querySelector('.default-content-wrapper') || section;
-        viewAllBtn = document.createElement('a');
-        viewAllBtn.className = 'button view-all';
-        viewAllBtn.setAttribute('href', '#');
-        viewAllBtn.textContent = 'View All';
-        const p = document.createElement('p');
-        p.className = 'button-container';
-        p.appendChild(viewAllBtn);
-        wrapper.appendChild(p);
-      } else {
-        // normalize to act as button (prevent navigation)
-        viewAllBtn.classList.add('view-all');
-      }
+  //     let viewAllBtn = section.querySelector('.default-content-wrapper .button');
+  //     if (!viewAllBtn) {
+  //       const wrapper = section.querySelector('.default-content-wrapper') || section;
+  //       viewAllBtn = document.createElement('a');
+  //       viewAllBtn.className = 'button view-all';
+  //       viewAllBtn.setAttribute('href', '#');
+  //       viewAllBtn.textContent = 'View All';
+  //       const p = document.createElement('p');
+  //       p.className = 'button-container';
+  //       p.appendChild(viewAllBtn);
+  //       wrapper.appendChild(p);
+  //     } else {
+  //       // normalize to act as button (prevent navigation)
+  //       viewAllBtn.classList.add('view-all');
+  //     }
 
-      // Accessibility: set aria-controls and aria-expanded
-      const ulId = ul.id || `cards-${Math.random().toString(36).slice(2, 8)}`;
-      ul.id = ulId;
-      viewAllBtn.setAttribute('aria-controls', ulId);
-      viewAllBtn.setAttribute('aria-expanded', 'false');
-      viewAllBtn.setAttribute('role', 'button');
+  //     // Accessibility: set aria-controls and aria-expanded
+  //     const ulId = ul.id || `cards-${Math.random().toString(36).slice(2, 8)}`;
+  //     ul.id = ulId;
+  //     viewAllBtn.setAttribute('aria-controls', ulId);
+  //     viewAllBtn.setAttribute('aria-expanded', 'false');
+  //     viewAllBtn.setAttribute('role', 'button');
 
-      let isExpanded = false;
+  //     let isExpanded = false;
 
-      const toggleShowAll = (e) => {
-        e.preventDefault();
-        if (!isExpanded) {
-          // show all
-          hiddenItems.forEach((li) => li.classList.remove('cards-card-hidden'));
-          viewAllBtn.textContent = 'View Less'; // optional: change label
-          viewAllBtn.setAttribute('aria-expanded', 'true');
-          isExpanded = true;
-        } else {
-          // hide them again
-          hiddenItems.forEach((li) => li.classList.add('cards-card-hidden'));
-          viewAllBtn.textContent = 'View All';
-          viewAllBtn.setAttribute('aria-expanded', 'false');
-          isExpanded = false;
+  //     const toggleShowAll = (e) => {
+  //       e.preventDefault();
+  //       if (!isExpanded) {
+  //         // show all
+  //         hiddenItems.forEach((li) => li.classList.remove('cards-card-hidden'));
+  //         viewAllBtn.textContent = 'View Less'; // optional: change label
+  //         viewAllBtn.setAttribute('aria-expanded', 'true');
+  //         isExpanded = true;
+  //       } else {
+  //         // hide them again
+  //         hiddenItems.forEach((li) => li.classList.add('cards-card-hidden'));
+  //         viewAllBtn.textContent = 'View All';
+  //         viewAllBtn.setAttribute('aria-expanded', 'false');
+  //         isExpanded = false;
 
-          // optionally scroll to top of section so user sees beginning again
-          // section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      };
+  //         // optionally scroll to top of section so user sees beginning again
+  //         // section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  //       }
+  //     };
 
-      viewAllBtn.addEventListener('click', toggleShowAll);
-      // also allow keyboard activation on Enter/Space for anchor acting as button
-      viewAllBtn.addEventListener('keydown', (ev) => {
-        if (ev.key === 'Enter' || ev.key === ' ') {
-          ev.preventDefault();
-          toggleShowAll(ev);
-        }
-      });
-    });
-  }
-  setupAuthorListToggle();
+  //     viewAllBtn.addEventListener('click', toggleShowAll);
+  //     // also allow keyboard activation on Enter/Space for anchor acting as button
+  //     viewAllBtn.addEventListener('keydown', (ev) => {
+  //       if (ev.key === 'Enter' || ev.key === ' ') {
+  //         ev.preventDefault();
+  //         toggleShowAll(ev);
+  //       }
+  //     });
+  //   });
+  // }
+  // setupAuthorListToggle();
 
   const blkmain = block.closest('.contact-card');
   if (blkmain !== null) {

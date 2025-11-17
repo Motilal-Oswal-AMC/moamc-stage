@@ -154,7 +154,53 @@ export default function decorate(block) {
       const prevBtn = paginationWrapper.querySelector('.prev-btn');
       const nextBtn = paginationWrapper.querySelector('.next-btn');
       if (prevBtn) prevBtn.disabled = (currentPage === 1);
-      if (nextBtn) nextBtn.disabled = (currentPage === totalPages);
+      if (nextBtn) {
+        nextBtn.disabled = (currentPage === totalPages);
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }
+
+      const buttons = [];
+      const maxPagesToShow = Math.floor((totalPages / 2)) + 1;
+      // Total items to show (1, 2, 3, 4, 5, ..., 8)
+
+      if (totalPages <= maxPagesToShow) {
+      // If 7 or fewer pages, show all numbers
+        for (let i = 1; i <= totalPages; i += 1) {
+          buttons.push(i);
+        }
+      } else {
+      // If more than 7 pages, show 1, 2, 3, 4, 5, ..., [lastPage]
+      // This matches the Figma design `1 2 3 4 5 ... 8`
+        for (let i = 1; i <= totalPages; i += 1) {
+          if (i === 5) {
+          // Add the ellipsis
+            buttons.push('...');
+          } else if (i <= totalPages) {
+          // Add the last page number
+            buttons.push(i);
+          }
+        // All other pages (7, 8, etc. until the last) are skipped
+        }
+      }
+
+      buttons.forEach((pageNumber) => {
+        if (pageNumber === '...') {
+          const ellipsis = document.createElement('span');
+          ellipsis.textContent = '...';
+          ellipsis.className = 'pagination-ellipsis';
+          paginationWrapper.appendChild(ellipsis);
+        } else {
+          const btn = document.createElement('button');
+          btn.textContent = pageNumber;
+          btn.className = 'pagination-btn';
+          btn.dataset.page = pageNumber;
+          btn.addEventListener('click', () => goToPage(pageNumber));
+          paginationWrapper.appendChild(btn);
+        }
+      });
     }
 
     // 4. Create Previous Arrow
@@ -170,23 +216,22 @@ export default function decorate(block) {
     // 5. Create Number Buttons (and ... for ellipsis)
     // This logic will show 1, 2, 3, 4, 5, ..., [lastPage] (e.g., 8)
     const buttons = [];
-    const maxPagesToShow = 7; // Total items to show (1, 2, 3, 4, 5, ..., 8)
+    const maxPagesToShow = Math.floor((totalPages / 2)) + 1;
+    // Total items to show (1, 2, 3, 4, 5, ..., 8)
 
     if (totalPages <= maxPagesToShow) {
       // If 7 or fewer pages, show all numbers
-      for (let i = 1; i <= totalPages; i++) {
+      for (let i = 1; i <= totalPages; i += 1) {
         buttons.push(i);
       }
     } else {
       // If more than 7 pages, show 1, 2, 3, 4, 5, ..., [lastPage]
       // This matches the Figma design `1 2 3 4 5 ... 8`
-      for (let i = 1; i <= totalPages; i++) {
-        if (i <= 5) {
-          buttons.push(i);
-        } else if (i === 6) {
+      for (let i = 1; i <= totalPages; i += 1) {
+        if (i === 5) {
           // Add the ellipsis
           buttons.push('...');
-        } else if (i === totalPages) {
+        } else if (i <= totalPages) {
           // Add the last page number
           buttons.push(i);
         }
@@ -239,7 +284,7 @@ export default function decorate(block) {
   if (mainContainer) {
     // Select all the card items
     const items = Array.from(block.querySelectorAll(':scope > [class*="moedge-build-cont"]'));
-    const itemsPerPage = 12;
+    const itemsPerPage = items.slice(0, 12).length;
 
     if (items.length > itemsPerPage) {
       setupPagination(block, items, itemsPerPage);
