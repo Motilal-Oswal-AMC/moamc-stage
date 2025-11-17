@@ -562,7 +562,7 @@ main>.section.previous-studies-tab {
       h5,
       h6 {
         @include media(mobile) {
-          margin: 32px 0 24px 0;
+          margin: 32px 0 24px;
         }
       }
     }
