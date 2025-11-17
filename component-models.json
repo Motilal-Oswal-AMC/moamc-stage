@@ -573,6 +573,10 @@
           {
             "name": "QGLP Tab Component",
             "value": "qglp-tab-component"
+          },
+          {
+            "name": "Coverage Table Panel",
+            "value": "coverage-table-panel"
           }
         ]
       },
