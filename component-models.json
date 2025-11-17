@@ -569,6 +569,10 @@
           {
             "name": "Investor Education Key Investing",
             "value": "key-investing"
+          },
+          {
+            "name": "Coverage Table Panel",
+            "value": "coverage-table-panel"
           }
         ]
       },
