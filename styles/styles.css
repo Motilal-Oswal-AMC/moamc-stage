@@ -1725,7 +1725,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     top: 100%;
     margin-top: 6px;
     width: 100%;
-    z-index: 5;
+    z-index: 30;
     display: none;
 }
 

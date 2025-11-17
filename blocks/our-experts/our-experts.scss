@@ -40,6 +40,7 @@
 
             &-cont1 {
                 .our-expert-section1 {
+
                     h1,
                     h2,
                     h3,
@@ -121,7 +122,6 @@
                         }
 
                         .floating-label-wrapper {
-                            width: 100%;
                             line-height: 0;
                             width: 100%;
 
@@ -168,7 +168,7 @@
 
                     .our-expert-sub2 {
                         display: none;
-                        
+
                         // display: flex;
                         // align-items: center;
                         // gap: 8px;
@@ -242,10 +242,12 @@
                         background-color: var(--neutrals-white);
                         border: 1px solid var(--neutrals-200);
                         border-radius: 6px;
-                        width: 100%;
+                        width: 96.9%;
                         margin: 4px 0 0;
                         max-height: 300px;
                         overflow: auto;
+                        z-index: 10;
+                        margin-right: 16px;
 
                         &::-webkit-scrollbar {
                             width: 3px;
@@ -266,7 +268,7 @@
 
                         .result-item {
                             margin: unset;
-                            padding: 12px 20px 12px;
+                            padding: 12px 20px;
                             cursor: pointer;
 
                             .list {
@@ -274,13 +276,27 @@
                                 line-height: var(--label-large-line-height);
                                 color: var(--neutrals-black);
                                 font-family: var(--body);
-                                font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+                                font-feature-settings: "ss01"on, "ss04"on, "cv01"on, "cv02"on, "cv03"on, "cv04"on, "cv06"on, "cv09"on, "cv10"on, "cv11"on;
                                 font-weight: 400;
                             }
 
                             &:last-child {
                                 padding-bottom: unset;
                             }
+                        }
+
+                        .no-results-message {
+                            font-size: var(--body-small-regular-size);
+                            line-height: var(--label-large-line-height);
+                            color: var(--neutrals-black);
+                            font-family: var(--body);
+                            font-feature-settings: var(--font-features-default);
+                            font-weight: 400;
+                            position: relative;
+                            top: 0;
+                            padding-left: 13px;
+                            border: none;
+                            z-index: 10;
                         }
                     }
 

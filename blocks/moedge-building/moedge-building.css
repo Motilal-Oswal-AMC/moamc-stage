@@ -445,7 +445,7 @@
   display: none;
 }
 .popular-artical.our-author-detail.moedge-building-container .moedge-building.block > div .moedge-build-sec3 > .moedge-build-sub1 {
-  padding-bottom: 0;
+  padding-bottom: 24px;
 }
 @media (max-width: 768px) {
   .popular-artical.our-author-detail.moedge-building-container > div.default-content-wrapper {

@@ -177,10 +177,12 @@
   background-color: var(--neutrals-white);
   border: 1px solid var(--neutrals-200);
   border-radius: 6px;
-  width: 100%;
+  width: 96.9%;
   margin: 4px 0 0;
   max-height: 300px;
   overflow: auto;
+  z-index: 10;
+  margin-right: 16px;
 }
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .search-results::-webkit-scrollbar {
   width: 3px;
@@ -211,6 +213,19 @@
 }
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .search-results .result-item:last-child {
   padding-bottom: unset;
+}
+.section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .search-results .no-results-message {
+  font-size: var(--body-small-regular-size);
+  line-height: var(--label-large-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
+  font-feature-settings: var(--font-features-default);
+  font-weight: 400;
+  position: relative;
+  top: 0;
+  padding-left: 13px;
+  border: none;
+  z-index: 10;
 }
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .search-results.dsp-none {
   display: none;

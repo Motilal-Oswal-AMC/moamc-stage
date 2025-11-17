@@ -1,6 +1,7 @@
 @import "../../../styles/fonts.css";
 .section.edge-filter-container {
-  margin: 24px 0;
+  margin: 0;
+  padding-top: 40px;
 }
 @media (max-width: 768px) {
   .section.edge-filter-container {
@@ -13,6 +14,7 @@
     box-shadow: 0 -4px 12px 0 rgba(0, 0, 0, 0.0509803922);
     z-index: 10;
     min-height: 60px;
+    padding: 0;
   }
 }
 @media (max-width: 768px) {
@@ -23,29 +25,28 @@
 .section.edge-filter-container .edge-filter-wrapper .edge-filter {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 @media (max-width: 768px) {
   .section.edge-filter-container .edge-filter-wrapper .edge-filter {
     justify-content: center;
+    padding-top: 20px;
   }
 }
-@media (max-width: 768px) {
-  .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont1,
-  .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont2 {
-    width: 50%;
-  }
+.section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont1 .edge-filter-sub1 .filter-lists1,
+.section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont2 .edge-filter-sub1 .filter-lists1 {
+  display: none;
 }
 @media (max-width: 768px) {
   .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont1 .edge-filter-sub1 .filter-lists1,
   .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont2 .edge-filter-sub1 .filter-lists1 {
-    display: flex;
     padding: 16px 16px 20px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     flex: 1 0 0;
+    display: none;
   }
 }
 .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont1 .edge-filter-sub1 .filter-lists1 .filter-lists-wrap1,
@@ -64,13 +65,16 @@
     line-height: var(--body-medium-medium-line-height, 20px);
   }
 }
+.section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont2 {
+  display: none;
+}
 .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-cont2 .edge-filter-sub1 .filter-lists1 {
   border: none;
 }
 .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 {
   display: flex;
   align-items: center;
-  gap: 9px;
+  gap: 24px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -88,10 +92,10 @@
   color: var(--neutrals-black);
   font-feature-settings: var(--font-features-default);
   font-family: var(--body);
-  font-size: var(--body-small-medium-size);
+  font-size: var(--body-medium-medium-size);
   font-style: normal;
   font-weight: 500;
-  line-height: var(--body-small-medium-line-height);
+  line-height: var(--body-medium-medium-line-height);
 }
 .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 > li p span {
   width: 16px;
@@ -164,10 +168,10 @@
   color: var(--neutrals-black);
   font-feature-settings: var(--font-features-default);
   font-family: var(--body);
-  font-size: var(--body-small-medium-size);
+  font-size: var(--body-medium-medium-size);
   font-style: normal;
   font-weight: 500;
-  line-height: var(--body-small-medium-line-height);
+  line-height: var(--body-medium-medium-line-height);
 }
 @media (max-width: 768px) {
   .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .comlist.filter-lists-wrap1 {
@@ -177,9 +181,7 @@
 .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .comlist.filter-lists-wrap1 + .filter-lists-wrap2 {
   display: none;
 }
-@media (max-width: 768px) {
-  .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .filter-lists2,
-  .section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .filter-lists3 {
-    display: none;
-  }
+.section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .filter-lists2,
+.section.edge-filter-container .edge-filter-wrapper .edge-filter .edge-filter-sub1 .filter-lists3 {
+  min-width: 120px;
 }/*# sourceMappingURL=edge-filter.css.map */

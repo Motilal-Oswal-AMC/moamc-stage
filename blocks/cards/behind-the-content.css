@@ -119,6 +119,11 @@
   overflow: hidden;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .behind-the-content .cards-wrapper .cards > ul li .cards-card-body p:last-of-type {
+    height: 77.5%;
+  }
+}
 .behind-the-content .cards-wrapper .cards > ul li .cards-card-body p:last-of-type a {
   margin: 0;
   padding: 0;
@@ -212,30 +217,38 @@
     padding: 16px 0;
   }
 }
-.behind-the-content.our-author-list {
+.our-author-list.our-experts-container {
+  margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .our-author-list.our-experts-container {
+    margin-top: 20px;
+  }
+}
+.our-author-list.our-experts-container .behind-the-content.our-author-list {
   margin-top: 0;
   /* optional: make the view all button visually consistent */
 }
 @media (max-width: 768px) {
-  .behind-the-content.our-author-list {
+  .our-author-list.our-experts-container .behind-the-content.our-author-list {
     margin-top: 36px;
   }
 }
-.behind-the-content.our-author-list .default-content-wrapper:last-of-type .button-container .button {
+.our-author-list.our-experts-container .behind-the-content.our-author-list .default-content-wrapper:last-of-type .button-container .button {
   height: 40px;
 }
-.behind-the-content.our-author-list .cards-card-hidden {
+.our-author-list.our-experts-container .behind-the-content.our-author-list .cards-card-hidden {
   display: none !important;
 }
-.behind-the-content.our-author-list .button.view-all {
+.our-author-list.our-experts-container .behind-the-content.our-author-list .button.view-all {
   cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-.behind-the-content.our-author-list .cards ul > li.card-hidden {
+.our-author-list.our-experts-container .behind-the-content.our-author-list .cards ul > li.card-hidden {
   display: none;
 }
-.behind-the-content.our-author-list.all-cards-visible .button-container {
+.our-author-list.our-experts-container .behind-the-content.our-author-list.all-cards-visible .button-container {
   display: none;
 }/*# sourceMappingURL=behind-the-content.css.map */

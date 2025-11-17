@@ -577,6 +577,10 @@
           {
             "name": "Media Coverage Tab Component",
             "value": "media-coverage-component"
+          },
+          {
+            "name": "Coverage Table Panel",
+            "value": "coverage-table-panel"
           }
         ]
       },
@@ -2551,6 +2555,25 @@
         "name": "text",
         "value": "",
         "label": "Enter the text authors Details",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "edge-filter",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "one text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "two text",
+        "value": "",
+        "label": "Text",
         "valueType": "string"
       }
     ]

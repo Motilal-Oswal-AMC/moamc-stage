@@ -32,14 +32,14 @@ main .previous-studies-blog-container.section.previous-studies-each-details{
                     max-height: 164px;
                 }
     
-                &:before {
+                &::before {
                 content: '';
                 position: absolute;
                 bottom: 0;
                 width: 100%;
                 height: 100%;
                 border-radius: var(--border-radius-8);
-                background: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+                background: linear-gradient(0deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 40%) 100%);
                 z-index: 2;
                 pointer-events: none;
     

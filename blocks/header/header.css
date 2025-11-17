@@ -1877,6 +1877,7 @@ header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub
 
     header nav[aria-expanded='true'] .nav-sections .nav-sec-cont1 {
         overflow-y: scroll;
+        width: max-content;
     }
 
     header nav .nav-sections ul>li>ul {

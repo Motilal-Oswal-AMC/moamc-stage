@@ -355,7 +355,8 @@
 @media (max-width: 768px) {
   .section.qglp-tabs .tabs-wrapper .tabs .tabs-list {
     margin-bottom: 20px;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
     -ms-overflow-style: none;
     justify-content: flex-start;
     padding: 16px;
@@ -364,7 +365,7 @@
 .section.qglp-tabs .tabs-wrapper .tabs .tabs-list::-webkit-scrollbar {
   display: none;
 }
-.section.qglp-tabs.qglp-tab-component .tabs-list {
+.section.qglp-tabs.qglp-tab-component .tabs-wrapper .tabs .tabs-list {
   display: flex;
   padding-bottom: 40px;
   -moz-column-gap: 8px;

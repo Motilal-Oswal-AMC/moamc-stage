@@ -2028,8 +2028,9 @@
             content: "";
             min-width: 12px;
             height: 12px;
+
             // background-color: var(--neutrals-black);
-            background-color: rgba(0,0,0,0.4);
+            background-color: rgb(0 0 0 / 40%);
             border-radius: 50%;
             position: absolute;
             top: 50%;

@@ -564,7 +564,7 @@
 
         >div .moedge-build-sec3 {
             >.moedge-build-sub1 {
-                padding-bottom: 0;
+                padding-bottom: 24px;
             }
         }
     }
@@ -781,7 +781,7 @@
     padding: 0 10px;
     line-height: 1;
     aspect-ratio: 4.36 / 7.54;
-    fill: rgba(63, 63, 63, 0.80);
+    fill: rgb(63 63 63 / 80%);
 }
 
 .pr-news-list.moedge-building-container .pagination-arrow:disabled {
