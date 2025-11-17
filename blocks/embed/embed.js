@@ -113,15 +113,17 @@ export default function decorate(block) {
   }
 
   const main = block.closest('main');
-  const prevStudieswrapper = main.querySelectorAll('.prev-studies-wrapper');
-  if (prevStudieswrapper != null) {
-    prevStudieswrapper.forEach((el) => {
-      dataMapMoObj.CLASS_PREFIXES = ['annual-wealth-wrap', 'aw-ctn', 'aw-subctn', 'aw-subctnIn'];
-      dataMapMoObj.addIndexed(el);
-    });
+  if (main !== null) {
+    const prevStudieswrapper = main.querySelectorAll('.prev-studies-wrapper');
+    if (prevStudieswrapper.length !== 0) {
+      prevStudieswrapper.forEach((el) => {
+        dataMapMoObj.CLASS_PREFIXES = ['annual-wealth-wrap', 'aw-ctn', 'aw-subctn', 'aw-subctnIn'];
+        dataMapMoObj.addIndexed(el);
+      });
+    }
   }
 
-  if (!block.closest('.prev-studies-wrapper')) {
+  if (block.closest('.prev-studies-wrapper') !== null) {
     if (placeholder && !block.closest('.media-coverage') && !block.closest('.prev-studies-wrapper')) {
       const wrapper = document.createElement('div');
       wrapper.className = 'embed-placeholder';
@@ -307,13 +309,13 @@ export default function decorate(block) {
         }
       });
       block.closest('.section').style.display = 'block';
-      document.addEventListener('click', (event)=>{
+      document.addEventListener('click', (event) => {
         const selectedTab = tabmainclick.querySelector('.selected-tab');
         const tabslistwrap = tabmainclick.querySelector('.tab-droplist');
         if (!selectedTab.contains(event.target) && !tabslistwrap.contains(event.target)) {
           tabmainclick.classList.remove('active');
         }
-      })
+      });
     }
   }
   return block;
