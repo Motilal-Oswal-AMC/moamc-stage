@@ -12,7 +12,6 @@
 .section .decoding-qglp-wrapper .decoding-qglp {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 67px;
 }
 @media (max-width: 768px) {
@@ -30,6 +29,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  margin-top: 47px;
 }
 .section .decoding-qglp-wrapper .decoding-qglp .glpcoding1 .glpcoding-inner1 .glpcoding-sub-inner1 {
   margin: 0;
