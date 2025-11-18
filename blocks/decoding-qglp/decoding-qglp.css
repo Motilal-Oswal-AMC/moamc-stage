@@ -5,6 +5,7 @@ main.nfo-nav .section.decoding-qglp-container {
 @media (max-width: 768px) {
   main.nfo-nav .section.decoding-qglp-container {
     margin-top: 0;
+    padding-bottom: 8px;
   }
 }
 
@@ -111,10 +112,4 @@ main.nfo-nav .section.decoding-qglp-container {
   flex-shrink: 0;
   border-radius: 16px;
   background: var(--blue-1-25);
-}
-
-@media (max-width: 768px) {
-  .section.decoding-qglp-container {
-    padding-bottom: 8px;
-  }
 }/*# sourceMappingURL=decoding-qglp.css.map */
