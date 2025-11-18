@@ -308,7 +308,7 @@
                             box-sizing: border-box;
                             gap: unset;
 
-                            >li {
+                            >li.itemleftart1 {
                                 // padding: 0 0.5rem;
                                 flex-grow: 0;
                                 flex-shrink: 0;
@@ -509,7 +509,7 @@
                     border-radius: var(--border-radius-8);
                     background: var(--neutrals-black);
 
-                    .button {
+                    .button.mainarticle1 {
                         color: var(--text-white);
                         text-align: center;
                         font-feature-settings: var(--font-features-default);

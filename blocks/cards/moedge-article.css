@@ -171,7 +171,7 @@
 .section.main-wrapper.moedge-article-details .article-left-wrapper .articlesub2 .leftartsub1 .comlist.leftartitem2,
 .section.main-wrapper.moedge-article-details .article-left-wrapper .articlesub2 .leftartsub1 .leftartitem3,
 .section.main-wrapper.moedge-article-details .article-left-wrapper .articlesub2 .leftartsub1 .leftartitem5 {
-  margin: 24px 0 24px;
+  margin: 24px 0;
   color: #3D3D3D;
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-family: var(--body);
@@ -249,7 +249,7 @@
   box-sizing: border-box;
   gap: unset;
 }
-.section.main-wrapper.moedge-article-details .article-left-wrapper .articlesub2 .leftartsub1 .leftartitem4 > li.comlist .itemarticle1 > li {
+.section.main-wrapper.moedge-article-details .article-left-wrapper .articlesub2 .leftartsub1 .leftartitem4 > li.comlist .itemarticle1 > li.itemleftart1 {
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -415,7 +415,7 @@
   border-radius: var(--border-radius-8);
   background: var(--neutrals-black);
 }
-.section.main-wrapper.moedge-article-details .article-right-wrapper .articlesub1 .default-content-wrapper.articleitem1 p.subarticle2 .button {
+.section.main-wrapper.moedge-article-details .article-right-wrapper .articlesub1 .default-content-wrapper.articleitem1 p.subarticle2 .button.mainarticle1 {
   color: var(--text-white);
   text-align: center;
   font-feature-settings: var(--font-features-default);
