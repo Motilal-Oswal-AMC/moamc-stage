@@ -968,6 +968,7 @@ export default async function decorate(block) {
       const facebookBtn = dspblk.querySelector(".listindex1");
       if (facebookBtn) {
         facebookBtn.addEventListener("click", (e) => {
+          facebookBtn.querySelector('a').removeAttribute('href');
           e.stopPropagation();
           const { shareUrl } = getShareData();
           const fbLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
@@ -978,6 +979,7 @@ export default async function decorate(block) {
       // 🔹 WhatsApp Share
       const whatsappBtn = dspblk.querySelector(".listindex2");
       if (whatsappBtn) {
+        whatsappBtn.querySelector('a').removeAttribute('href');
         whatsappBtn.addEventListener("click", (e) => {
           e.stopPropagation();
           const { shareUrl, shareText } = getShareData();
@@ -989,6 +991,7 @@ export default async function decorate(block) {
       // 🔹 X (Twitter) Share
       const twitterBtn = dspblk.querySelector(".listindex3");
       if (twitterBtn) {
+        twitterBtn.querySelector('a').removeAttribute('href');
         twitterBtn.addEventListener("click", (e) => {
           e.stopPropagation();
           const { shareUrl, shareText } = getShareData();
@@ -998,8 +1001,8 @@ export default async function decorate(block) {
       }
 
       const copyfunc = dspblk.querySelector('.listindex4');
-      copyfunc.querySelector('a').removeAttribute('href');
       if (copyfunc) {
+        copyfunc.querySelector('a').removeAttribute('href');
         copyfunc.addEventListener('click', (e) => {
           const urlCopied = dspblk.querySelector('.listindex5');
           e.stopPropagation();
