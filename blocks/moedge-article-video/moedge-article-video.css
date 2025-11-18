@@ -173,11 +173,6 @@
   margin: 0;
   list-style: none;
 }
-@media (max-width: 768px) {
-  .moedge-article-video-wrapper .moedge-article-video .mainarticle3 .itemarticle1 > ul {
-    gap: 40px;
-  }
-}
 .moedge-article-video-wrapper .moedge-article-video .mainarticle3 .itemarticle1 > ul .mainitemart1 p {
   margin: 0;
   padding: 0;
