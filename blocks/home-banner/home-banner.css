@@ -802,6 +802,8 @@ button.swiper-pagination-bullet {
   right: 67px;
   bottom: -31px;
   z-index: 15;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 @media (max-width: 1025px) {
   .section.home-banner-container .default-content-wrapper {

@@ -28,6 +28,7 @@
     // top: 62%;
     bottom: -31px;
     z-index: 15;
+    max-width: max-content;
 
     @include media(tab) {
       right: 16px;
