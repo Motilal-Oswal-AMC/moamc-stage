@@ -4,7 +4,7 @@ import dataMapMoObj from '../../scripts/constant.js';
 import dataCfObj from '../../scripts/dataCfObj.js';
 // import { loadAutoBlock } from '../../scripts/scripts.js';
 // import {a,button,div,h3,li,ul} from '../../scripts/dom-helpers.js';
-
+// yogesh bhai OG
 // media query match that indicates mobile/tablet width
 export const isDesktop = window.matchMedia('(min-width: 900px)');
 /**
