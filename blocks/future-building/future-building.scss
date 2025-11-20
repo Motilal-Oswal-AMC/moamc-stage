@@ -639,6 +639,12 @@
 
 // Investor Education - Keys of Investing
 .section.key-investing.future-building-container {
+    margin-bottom: 40px;
+
+    @include media(mobile){
+        margin-bottom: var(--spacing-80);
+    }
+
     .library-btn {
         &1 {
             padding: 40px 0;
@@ -765,20 +771,20 @@
             }
 
             .future-building {
-                margin: 0 0 62px;
+                margin: 0 0 40px;
 
                 @include media(mobile) {
-                    margin: 0 0 102px;
+                    margin: 0 0 16px;
                 }
 
                 .swiper-wrapper {
                     flex-wrap: wrap;
                     gap: 16px;
-                    margin: 0 0 40px;
+                    // margin: 0 0 40px;
 
                     @include media(mobile) {
                         gap: 0;
-                        margin: 0 0 16px;
+                        // margin: 0 0 16px;
                     }
 
                     .swiper-slide {
@@ -890,7 +896,15 @@
                                 }
                             }
                         }
+
+                        &.hidden-item{
+                            display: none !important;
+                        }
                     }
+                }
+
+                .navigate-wrap {
+                    display: none;
                 }
 
                 // .navigate-wrap {
@@ -991,7 +1005,7 @@
 
         @include media(mobile) {
             padding: 0;
-            padding-bottom: 40px;
+            margin: 0;
         }
 
         button {
