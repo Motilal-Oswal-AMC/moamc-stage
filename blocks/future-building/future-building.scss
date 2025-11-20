@@ -31,7 +31,7 @@
         }
     }
 
-    > div.library-btn1 {
+    >div.library-btn1 {
         width: 100%;
         height: 100%;
         padding-bottom: 40px;
@@ -48,24 +48,20 @@
             text-align: left;
             font-style: normal;
 
-            @include font-style(
-                map.get($typography-desktop, heading-h4-size),
+            @include font-style(map.get($typography-desktop, heading-h4-size),
                 map.get($typography-desktop, heading-h4-line-height),
                 $blue-1-800-primary,
                 600,
-                $title
-            );
+                $title );
 
             @include media(mobile) {
                 display: none;
 
-                @include font-style(
-                    map.get($typography-desktop, sub-header-large-size),
+                @include font-style(map.get($typography-desktop, sub-header-large-size),
                     map.get($typography-desktop, sub-header-medium-line-height),
                     $blue-1-800-primary,
                     600,
-                    $title
-                );
+                    $title );
             }
         }
 
@@ -90,13 +86,11 @@
             @include font-style(var(--body-medium-regular-size), 24px, var(--blue-1-800-primary), 400, var(--body));
 
             @include media(mobile) {
-                @include font-style(
-                    map.get($typography-mobile, paragraph-small-size),
+                @include font-style(map.get($typography-mobile, paragraph-small-size),
                     map.get($typography-mobile, paragraph-small-line-height),
                     $blue-1-800-primary,
                     400,
-                    $body
-                );
+                    $body );
             }
         }
     }
@@ -180,12 +174,12 @@
                         padding: 24px 0;
                     }
 
-                    > ul.cards-listcards1 {
+                    >ul.cards-listcards1 {
                         list-style: none;
                         padding: 0;
                         margin: 0;
 
-                        > li {
+                        >li {
                             padding: 0;
                             margin: 0;
                             line-height: normal;
@@ -209,7 +203,7 @@
                             }
                         }
 
-                        & > li.cards-list-1-cards1 {
+                        &>li.cards-list-1-cards1 {
                             display: flex;
                             align-items: center;
 
@@ -243,13 +237,11 @@
                                 min-height: 24px;
 
                                 @include media(mobile) {
-                                    @include font-style(
-                                        map.get($typography-mobile, label-small-size),
+                                    @include font-style(map.get($typography-mobile, label-small-size),
                                         map.get($typography-mobile, label-small-line-height),
                                         $blue-1-800-primary,
                                         400,
-                                        $body
-                                    );
+                                        $body );
 
                                     gap: 4px;
                                     padding: 0 8px;
@@ -284,13 +276,11 @@
                                     align-items: center;
 
                                     @include media(mobile) {
-                                        @include font-style(
-                                            map.get($typography-mobile, paragraph-xsmall-size),
+                                        @include font-style(map.get($typography-mobile, paragraph-xsmall-size),
                                             map.get($typography-mobile, paragraph-xsmall-line-height),
                                             $neutrals-700,
                                             400,
-                                            $body
-                                        );
+                                            $body );
                                     }
 
                                     .icon {
@@ -330,7 +320,7 @@
                             }
                         }
 
-                        & > li.cards-list-1-cards2 {
+                        &>li.cards-list-1-cards2 {
                             margin-bottom: 4px;
 
                             // min-height: 48px;
@@ -356,53 +346,45 @@
                                     white-space: unset;
                                     text-align: left;
 
-                                    @include font-style(
-                                        map.get($typography-desktop, body-large-medium-size),
+                                    @include font-style(map.get($typography-desktop, body-large-medium-size),
                                         map.get($typography-desktop, body-large-medium-line-height),
                                         $blue-1-800-primary,
                                         500,
-                                        $body
-                                    );
+                                        $body );
 
                                     @include media(mobile) {
-                                        @include font-style(
-                                            map.get($typography-mobile, body-large-medium-size),
+                                        @include font-style(map.get($typography-mobile, body-large-medium-size),
                                             map.get($typography-mobile, body-large-medium-line-height),
                                             $blue-1-800-primary,
                                             500,
-                                            $body
-                                        );
+                                            $body );
                                     }
                                 }
                             }
                         }
 
-                        & > li.cards-list-1-cards3 {
+                        &>li.cards-list-1-cards3 {
                             p {
                                 margin: 0;
                                 padding: 0;
 
-                                @include font-style(
-                                    map.get($typography-desktop, body-medium-regular-size),
+                                @include font-style(map.get($typography-desktop, body-medium-regular-size),
                                     24px,
                                     $text-body-2,
                                     map.get($font-weights, regular),
-                                    $body
-                                );
+                                    $body );
 
                                 @include media(mobile) {
-                                    @include font-style(
-                                        map.get($typography-mobile, paragraph-small-size),
+                                    @include font-style(map.get($typography-mobile, paragraph-small-size),
                                         map.get($typography-mobile, paragraph-small-line-height),
                                         $text-body-2,
                                         400,
-                                        $body
-                                    );
+                                        $body );
                                 }
                             }
                         }
 
-                        & > li.cards-list-1-cards4 {
+                        &>li.cards-list-1-cards4 {
                             margin-top: 16px;
 
                             .button-container {
@@ -425,22 +407,18 @@
                                     height: 100%;
                                     min-height: unset;
 
-                                    @include font-style(
-                                        map.get($typography-desktop, body-small-regular-size),
+                                    @include font-style(map.get($typography-desktop, body-small-regular-size),
                                         map.get($typography-desktop, body-small-regular-line-height),
                                         $text-text-link,
                                         400,
-                                        $body
-                                    );
+                                        $body );
 
                                     @include media(mobile) {
-                                        @include font-style(
-                                            map.get($typography-mobile, body-small-regular-size),
+                                        @include font-style(map.get($typography-mobile, body-small-regular-size),
                                             map.get($typography-mobile, body-small-regular-line-height),
                                             $text-text-link,
                                             400,
-                                            $body
-                                        );
+                                            $body );
 
                                         line-height: var(--text-link-small-line-height);
                                         min-height: unset;
@@ -453,7 +431,7 @@
                             // }
                         }
 
-                        & > li.cards-list-1-cards5 {
+                        &>li.cards-list-1-cards5 {
                             position: absolute;
                             display: none;
                         }
@@ -545,7 +523,7 @@
         }
     }
 
-    & > .library-btn3 {
+    &>.library-btn3 {
         display: inline-block;
         position: absolute;
         padding: 0;
@@ -605,7 +583,7 @@
 }
 
 .moedge-article-main {
-    .section.future-building-container > .library-btn3 {
+    .section.future-building-container>.library-btn3 {
         top: 30px;
 
         @include media(mobile) {
@@ -614,19 +592,11 @@
         }
     }
 
-    .section.future-building-container.future-building-article-details > .library-btn3 {
+    .section.future-building-container.future-building-article-details>.library-btn3 {
         top: 14px;
     }
 
-    .section.future-building-container.future-building-article-details
-        .future-building
-        .swiper-wrapper
-        .swiper-slide
-        .swiper-slide-cards-2
-        > ul.cards-listcards1
-        > li.cards-list-1-cards4
-        .button-container
-        a {
+    .section.future-building-container.future-building-article-details .future-building .swiper-wrapper .swiper-slide .swiper-slide-cards-2>ul.cards-listcards1>li.cards-list-1-cards4 .button-container a {
         line-height: 20px;
 
         // text-underline-offset: 20%;
@@ -664,13 +634,11 @@
             h4,
             h5,
             h6 {
-                @include font-style(
-                    var(--heading-h4-size),
+                @include font-style(var(--heading-h4-size),
                     var(--heading-h4-line-height),
                     var(--blue-1-800-primary),
                     600,
-                    var(--title)
-                );
+                    var(--title));
 
                 margin: 0;
 
@@ -706,13 +674,11 @@
 
                 .keyinvest-label,
                 .keyinvest-inp {
-                    @include font-style(
-                        var(--body-medium-regular-size),
+                    @include font-style(var(--body-medium-regular-size),
                         var(--body-medium-regular-line-height),
                         var(--text-body-2),
                         400,
-                        var(--body)
-                    );
+                        var(--body));
 
                     @include media(mmobile) {
                         font-size: var(--body-medium-regular-size);
@@ -725,19 +691,17 @@
                     border: none;
                     outline: none;
 
-                    &:focus + label {
+                    &:focus+label {
                         top: 0;
                         left: 25px;
                         padding: 0 4px;
                         background-color: var(--neutrals-white);
 
-                        @include font-style(
-                            var(--text-link-xsmall-size),
+                        @include font-style(var(--text-link-xsmall-size),
                             var(--text-link-xsmall-line-height),
                             var(--blue-1-800-primary),
                             400,
-                            var(--body)
-                        );
+                            var(--body));
 
                         @include media(mobile) {
                             font-size: var(--text-link-xsmall-size);
@@ -752,6 +716,71 @@
                     top: 50%;
                     transform: translateY(-50%);
                     transition: all 0.2s ease;
+                }
+
+                .key-search-results {
+                    position: absolute;
+                    top: 45px;
+                    display: block;
+                    background-color: var(--neutrals-white);
+                    border: 1px solid var(--neutrals-200);
+                    border-radius: 6px;
+                    width: 96.9%;
+                    margin: 4px 0 0;
+                    max-height: 300px;
+                    overflow: auto;
+                    z-index: 10;
+                    margin-right: 16px;
+
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                        background-color: #464343;
+                    }
+
+                    &::-webkit-scrollbar-thumb {
+                        width: 3px;
+                        background-color: #424242;
+                        border-radius: 0 1px 1px 0;
+                    }
+
+                    &::-webkit-scrollbar-track {
+                        width: 3px;
+                        background-color: var(--neutrals-white);
+                        border-radius: 0 6px 6px 0;
+                    }
+
+                    .result-item {
+                        margin: unset;
+                        padding: 12px 20px;
+                        cursor: pointer;
+
+                        .list {
+                            font-size: var(--body-small-regular-size);
+                            line-height: var(--label-large-line-height);
+                            color: var(--neutrals-black);
+                            font-family: var(--body);
+                            font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+                            font-weight: 400;
+                        }
+
+                        &:last-child {
+                            padding-bottom: unset;
+                        }
+                    }
+
+                    .no-results-message {
+                        font-size: var(--body-small-regular-size);
+                        line-height: var(--label-large-line-height);
+                        color: var(--neutrals-black);
+                        font-family: var(--body);
+                        font-feature-settings: var(--font-features-default);
+                        font-weight: 400;
+                        position: relative;
+                        top: 0;
+                        padding-left: 13px;
+                        border: none;
+                        z-index: 10;
+                    }
                 }
             }
         }
@@ -786,7 +815,7 @@
                             width: 32.223% !important;
                         }
 
-                        @media screen and (width <= 1025px) {
+                        @media screen and (width <=1025px) {
                             width: 31.88% !important;
                         }
 
@@ -824,13 +853,11 @@
                                 &1 {
                                     margin: 0 0 4px;
 
-                                    @include font-style(
-                                        var(--body-large-medium-size),
+                                    @include font-style(var(--body-large-medium-size),
                                         var(--body-large-medium-line-height),
                                         var(--blue-1-800-primary),
                                         500,
-                                        var(--body)
-                                    );
+                                        var(--body));
 
                                     @include media(mobile) {
                                         font-size: var(--body-large-medium-size);
@@ -841,13 +868,11 @@
                                 &2 {
                                     margin: 0 0 16px;
 
-                                    @include font-style(
-                                        var(--body-medium-regular-size),
+                                    @include font-style(var(--body-medium-regular-size),
                                         24px,
                                         var(--text-body-2),
                                         400,
-                                        var(--body)
-                                    );
+                                        var(--body));
 
                                     @include media(mobile) {
                                         font-size: var(--paragraph-small-regular-size);
@@ -863,13 +888,11 @@
                                     }
 
                                     .cards-list-1-button1 {
-                                        @include font-style(
-                                            14px,
+                                        @include font-style(14px,
                                             var(--text-link-small-line-height),
                                             var(--text-text-link),
                                             400,
-                                            var(--body)
-                                        );
+                                            var(--body));
 
                                         text-decoration: underline;
                                         text-underline-offset: 2.8px;
@@ -953,13 +976,11 @@
                         justify-content: center;
                         opacity: unset;
 
-                        @include font-style(
-                            var(--label-medium-size),
+                        @include font-style(var(--label-medium-size),
                             var(--label-medium-line-height),
                             var(--neutrals-700),
                             400,
-                            var(--body)
-                        );
+                            var(--body));
 
                         @include media(mobile) {
                             font-size: var(--label-medium-size);
