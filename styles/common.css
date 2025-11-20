@@ -1117,6 +1117,11 @@ main > .section.previous-studies-tab.tabs-container .tab-dropdown-wrap .tab-drop
   margin: 0;
   padding: 24px 0;
 }
+@media (max-width: 768px) {
+  .section.breadcrumbs {
+    padding: 20px 0 24px;
+  }
+}
 .section.breadcrumbs .breadul {
   max-width: 1232px;
   margin: 0 auto;
@@ -1182,7 +1187,7 @@ main > .section.previous-studies-tab.tabs-container .tab-dropdown-wrap .tab-drop
   }
 }
 .section.breadcrumbs .breadul .breadli:last-child a.breadlist {
-  color: var(--blue-1800-primary, #2e2a94);
+  color: var(--neutrals-800, #424242);
   font-feature-settings: var(--font-features-default);
   font-family: var(--body, Inter);
   font-size: var(--label-small-size);

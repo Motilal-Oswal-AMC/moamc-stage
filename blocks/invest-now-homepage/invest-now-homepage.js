@@ -2136,6 +2136,16 @@ export default function decorate(block) {
   );
 
   // Build modal
+  if (dataMapMoObj.planText === undefined || dataMapMoObj.planText === '') {
+    dataCfObj.cfDataObjs.forEach((fund) => {
+      if (fund.schDetail.schemeName === fundNameFromData) {
+        if (dataMapMoObj.planlistArr === undefined || dataMapMoObj.planlistArr.length === 0) {
+          dataMapMoObj.planlistArr = fund.planList;
+        }
+        dataMapMoObj.planText = `${fund.planList[0].planName} | ${fund.planList[0].optionName}`;
+      }
+    })
+  }
   const textdrop = dataMapMoObj.planText === undefined ? '' : dataMapMoObj.planText;
   const modal = div(
     {
