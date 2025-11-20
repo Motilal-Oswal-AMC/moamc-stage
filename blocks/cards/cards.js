@@ -243,7 +243,7 @@ export default function decorate(block) {
 
     // Only run this pagination logic if we are in the correct block
     if (mainContainer) {
-    // Select all the card items
+      // Select all the card items
       const items = Array.from(mainContainer.querySelectorAll('li'));
       const itemsPerPage = items.slice(0, 12).length;
 
@@ -297,6 +297,18 @@ subSection.forEach((sublist) => {
 
   dataMapMoObj.addIndexed(sublist);
 });
+
+const newSection = document.querySelectorAll('.our-investing-style.cards-container');
+dataMapMoObj.CLASS_PREFIXES = [
+  'our-invest-cont',
+  'our-invest-sec',
+  'our-invest-sub',
+  'our-invest-inner-text',
+  'our-invest-list',
+  'our-invest-list-content',
+  'our-invest-list-row',
+];
+newSection.forEach((sublist) => dataMapMoObj.addIndexed(sublist));
 
 // const emailFields = document.querySelectorAll(
 //   '.section.article-sub-right.subscribe-email .field-wrapper.email-wrapper input'
