@@ -36,6 +36,7 @@
     display: block;
     width: 100%;
   }
+
   .section.table-wrapper.fdp-campaign-container .fdp-campaign .compaign2 .compaignsub1 {
     width: 100%;
   }
@@ -46,6 +47,7 @@
     display: block;
     width: 100%;
   }
+
   .section.table-wrapper.fdp-campaign-container .fdp-campaign .compaign2 .compaignsub1 .compaigninner1 img {
     width: 100%;
   }
@@ -81,7 +83,7 @@
   width: 100%;
 }
 
-@media (max-width: 768px) {
+@media (width <= 768px) {
   .section.fdp-campaign-container.investor-banner.listing-investor-banner {
     margin: -24px 16px 0;
   }

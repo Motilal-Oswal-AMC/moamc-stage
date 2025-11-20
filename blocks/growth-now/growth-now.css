@@ -326,7 +326,7 @@
   background-color: transparent;
 }
 
-.section.growth-now-container .growth-now .fund-us-container .fund-sec-4 form fieldset .phnodata:has(input:not(:placeholder)) label {
+.section.growth-now-container .growth-now .fund-us-container .fund-sec-4 form fieldset .phnodata:has(input:not([placeholder])) label {
   top: -8px;
   transform: translateY(0);
   padding: 0 5px;

@@ -635,11 +635,13 @@
 .section.key-investing.future-building-container {
   margin-bottom: 40px;
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.key-investing.future-building-container {
     margin-bottom: var(--spacing-80);
   }
 }
+
 .section.key-investing.future-building-container .library-btn1 {
   padding: 40px 0;
   display: flex;
@@ -913,12 +915,15 @@
     line-height: var(--text-link-small-line-height);
   }
 }
+
 .section.key-investing.future-building-container .library-btn2 .future-building .swiper-wrapper .swiper-slide.hidden-item {
   display: none !important;
 }
+
 .section.key-investing.future-building-container .library-btn2 .future-building .navigate-wrap {
   display: none;
 }
+
 .section.key-investing.future-building-container .pagination-wrapper {
   display: flex;
   width: 340px;

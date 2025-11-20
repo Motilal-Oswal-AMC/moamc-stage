@@ -157,9 +157,9 @@
   color: #333;
 }
 
-.modal dialog .section.wealth-register .ragis-lab-btn > .inp-lab .inp-lab-div .inp:read-only {
+/* .modal dialog .section.wealth-register .ragis-lab-btn > .inp-lab .inp-lab-div .inp:read-only {
   color: #333;
-}
+} */
 
 .modal dialog .section.wealth-register .ragis-lab-btn > .inp-lab .inp-lab-div .error-icon {
   position: absolute;

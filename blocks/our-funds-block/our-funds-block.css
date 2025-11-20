@@ -159,9 +159,9 @@
   visibility: hidden;
 }
 
-.section .our-funds-block .fundcontainer .search-trending-wrapper .search-input .search::placeholder {
+/* .section .our-funds-block .fundcontainer .search-trending-wrapper .search-input .search::placeholder {
   visibility: hidden;
-}
+} */
 
 .section .our-funds-block .fundcontainer .search-trending-wrapper .search-input .cancel-search {
   max-width: 24px;
@@ -269,7 +269,7 @@
   line-height: var(--body-medium-regular-line-height);
 }
 
-.section .our-funds-block .fundcontainer .search-trending-wrapper .search-input:has(.search:not(:placeholder)) .search-label {
+.section .our-funds-block .fundcontainer .search-trending-wrapper .search-input:has(.search:not([placeholder])) .search-label {
   top: -10px;
   left: 35px;
   transform: translateY(0);

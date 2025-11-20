@@ -20,6 +20,7 @@
   display: block;
   border-radius: var(--border-radius-8);
 }
+
 @media screen and (width <= 390px) {
   .moedge-building > div .moedge-build-sec1 img {
     height: 188px;
@@ -248,24 +249,28 @@
     flex: 0 0 32.468%;
   }
 }
-@media (width >= 900px) and (max-width: 1299px) {
+
+@media (width >= 900px) and (width <= 1299px) {
   .moedge-building > div {
     max-width: 32.24%;
     flex: 0 0 32.24%;
   }
 }
-@media (width >= 900px) and (max-width: 1025px) {
+
+@media (width >= 900px) and (width <= 1025px) {
   .moedge-building > div {
     max-width: 31.8%;
     flex: 0 0 31.8%;
   }
 }
-@media (width >= 900px) and (max-width: 768px) {
+
+@media (width >= 900px) and (width <= 768px) {
   .moedge-building > div {
     max-width: 100%;
     flex: 0 0 100%;
   }
 }
+
 @media (width >= 900px) {
   .moedge-building > div .moedge-build-sec1 {
     height: 220px;
