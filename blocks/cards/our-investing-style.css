@@ -69,7 +69,7 @@
 .our-investing-style.cards-container .our-invest-cont2 .our-invest-sec1 ul li .cards-card-image img {
   width: 240px;
   height: 172px;
-  border-radius: 0 0 9px;
+  border-radius: 0 0 12px;
   -o-object-fit: contain;
      object-fit: contain;
   -o-object-position: bottom;
@@ -98,7 +98,7 @@
 .our-investing-style.cards-container .our-invest-cont3 {
   padding-top: 40px;
 }
-.our-investing-style.cards-container .our-invest-cont3 p {
+.our-investing-style.cards-container .our-invest-cont3 p.comlist {
   color: var(--text-body, #424242);
   text-align: center;
   font-feature-settings: var(--font-features-default);
@@ -111,12 +111,12 @@
   padding: 0 127px;
 }
 @media (max-width: 1025px) {
-  .our-investing-style.cards-container .our-invest-cont3 p {
+  .our-investing-style.cards-container .our-invest-cont3 p.comlist {
     padding: 0;
   }
 }
 @media (max-width: 768px) {
-  .our-investing-style.cards-container .our-invest-cont3 p {
+  .our-investing-style.cards-container .our-invest-cont3 p.comlist {
     padding: 0;
     font-size: 16px;
     line-height: 24px;

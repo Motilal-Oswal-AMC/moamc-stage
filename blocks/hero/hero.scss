@@ -79,8 +79,6 @@
                         font-style: normal;
                         font-weight: 500;
                         line-height: 40px;
-
-                        /* 111.111% */
                         max-width: 100%;
                         width: 100%;
                     }
@@ -100,16 +98,12 @@
 
                     @include media(mobile) {
                         color: var(--text-white, #FFF);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Mobile/Paragraph/Small */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--paragraph-small-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--paragraph-small-line-height);
-
-                        /* 142.857% */
                         max-width: 100%;
                         width: 100%;
                     }
@@ -119,8 +113,6 @@
 
                 .p33 {
                     border-radius: var(--border-radius-8);
-
-                    // background: var(--neutrals-white);
                     display: flex;
                     width: 160px;
                     height: 40px;
@@ -134,16 +126,12 @@
                         background: var(--neutrals-white);
                         color: var(--text-button-default);
                         text-align: center;
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Mobile/Button/Medium */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--button-medium-size);
                         font-style: normal;
                         font-weight: 500;
                         line-height: var(--button-medium-line-height);
-
-                        /* 125% */
                         position: absolute;
                         left: 0;
                     }
@@ -160,14 +148,12 @@
 .our-strategies {
     h2 {
         color: var(--blue-1-800-primary);
-        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
+        font-feature-settings: var(--font-features-default);
         font-family: var(--title);
         font-size: var(--heading-h3-size);
         font-style: normal;
         font-weight: 500;
         line-height: var(--heading-h3-line-height);
-
-        /* 122.222% */
         margin-bottom: 20px;
 
         @include media(mobile) {
@@ -197,16 +183,12 @@
 
                 .strategy21.comlist {
                     color: var(--blue-1-800-primary);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Body/Xlarge-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-xlarge-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--body-xlarge-regular-line-height);
-
-                    /* 120% */
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
@@ -234,16 +216,12 @@
 
                     @include media(mobile) {
                         color: var(--blue-1-800-primary);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Body/Xlarge-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-xlarge-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--body-xlarge-regular-line-height);
-
-                        /* 120% */
                         text-decoration: none;
                         width: 100%;
                         margin-bottom: 12px;
@@ -253,16 +231,12 @@
 
                 .strategy22 {
                     color: var(--neutrals-700);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Paragraph/Small-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-small-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--label-large-line-height);
-
-                    /* 142.857% */
                     text-decoration: none;
                     width: 497px;
 
@@ -273,16 +247,12 @@
 
                     @include media(mobile) {
                         color: var(--neutrals-700);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Paragraph/Small-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-small-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--label-large-line-height);
-
-                        /* 142.857% */
                         align-self: stretch;
                         width: 100%;
                     }
@@ -297,16 +267,12 @@
 
                 .strategy23 {
                     color: var(--blue-1-800-primary);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Body/Xlarge-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-xlarge-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--body-xlarge-regular-line-height);
-
-                    /* 120% */
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
@@ -332,16 +298,12 @@
 
                     @include media(mobile) {
                         color: var(--blue-1-800-primary);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Body/Xlarge-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-xlarge-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--body-xlarge-regular-line-height);
-
-                        /* 120% */
                         text-decoration: none;
                         width: 100%;
                         margin-bottom: 12px;
@@ -351,16 +313,12 @@
 
                 .strategy24 {
                     color: var(--neutrals-700);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Paragraph/Small-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-small-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--label-large-line-height);
-
-                    /* 142.857% */
                     text-decoration: none;
                     width: 497px;
 
@@ -372,16 +330,12 @@
 
                     @include media(mobile) {
                         color: var(--neutrals-700);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Paragraph/Small-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-small-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--label-large-line-height);
-
-                        /* 142.857% */
                         align-self: stretch;
                         width: 100%;
                     }
@@ -396,16 +350,12 @@
 
                 li.strategy25 {
                     color: var(--blue-1-800-primary);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Body/Xlarge-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-xlarge-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--body-xlarge-regular-line-height);
-
-                    /* 120% */
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
@@ -414,13 +364,11 @@
 
                     &::marker {
                         content: none;
-
                     }
 
                     .strategy31.icon {
                         width: 26px;
                         height: 24px;
-
                     }
 
                     @include media(mobile) {
@@ -435,8 +383,6 @@
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--body-xlarge-regular-line-height);
-
-                        /* 120% */
                         width: 100%;
                         margin-bottom: 12px;
                         height: 100%;
@@ -445,16 +391,12 @@
 
                 .strategy26 {
                     color: var(--neutrals-700);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Paragraph/Small-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-small-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--label-large-line-height);
-
-                    /* 142.857% */
                     text-decoration: none;
                     width: 497px;
 
@@ -471,16 +413,12 @@
 
                     @include media(mobile) {
                         color: var(--neutrals-700);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Paragraph/Small-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-small-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--label-large-line-height);
-
-                        /* 142.857% */
                         align-self: stretch;
                         width: 100%;
                     }
@@ -493,43 +431,33 @@
 
                 .strategy27 {
                     color: var(--blue-1-800-primary);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Body/Xlarge-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-xlarge-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--body-xlarge-regular-line-height);
-
-                    /* 120% */
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
 
                     &::marker {
                         content: none;
-
                     }
 
                     .icon-vector-arrow {
                         width: 26.5px;
                         height: 15px;
-
                     }
 
                     @include media(mobile) {
                         color: var(--blue-1-800-primary);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Body/Xlarge-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-xlarge-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--body-xlarge-regular-line-height);
-
-                        /* 120% */
                         width: 100%;
                         margin-bottom: 12px;
                         height: 100%;
@@ -538,16 +466,12 @@
 
                 .strategy28 {
                     color: var(--neutrals-700);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Paragraph/Small-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-small-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--label-large-line-height);
-
-                    /* 142.857% */
                     text-decoration: none;
                     width: 497px;
 
@@ -558,16 +482,12 @@
 
                     @include media(mobile) {
                         color: var(--neutrals-700);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Paragraph/Small-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-small-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--label-large-line-height);
-
-                        /* 142.857% */
                         align-self: stretch;
                         width: 100%;
                     }
@@ -580,16 +500,12 @@
 
                 .strategy29 {
                     color: var(--blue-1-800-primary);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Body/Xlarge-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-xlarge-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--body-xlarge-regular-line-height);
-
-                    /* 120% */
                     display: flex;
                     justify-content: space-between;
 
@@ -608,16 +524,12 @@
 
                     @include media(mobile) {
                         color: var(--blue-1-800-primary);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Body/Xlarge-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-xlarge-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--body-xlarge-regular-line-height);
-
-                        /* 120% */
                         width: 100%;
                         margin-bottom: 12px;
                         height: 100%;
@@ -628,16 +540,12 @@
 
                 .strategy210 {
                     color: var(--neutrals-700);
-                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                    /* Desktop/Paragraph/Small-regular */
+                    font-feature-settings: var(--font-features-default);
                     font-family: var(--body);
                     font-size: var(--body-small-regular-size);
                     font-style: normal;
                     font-weight: 400;
                     line-height: var(--label-large-line-height);
-
-                    /* 142.857% */
                     text-decoration: none;
                     width: 497px;
 
@@ -648,16 +556,12 @@
 
                     @include media(mobile) {
                         color: var(--neutrals-700);
-                        font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
-
-                        /* Desktop/Paragraph/Small-regular */
+                        font-feature-settings: var(--font-features-default);
                         font-family: var(--body);
                         font-size: var(--body-small-regular-size);
                         font-style: normal;
                         font-weight: 400;
                         line-height: var(--label-large-line-height);
-
-                        /* 142.857% */
                         align-self: stretch;
                         width: 100%;
                     }
@@ -733,7 +637,7 @@
                     }
                 }
 
-                p {
+                p.comlist {
                     margin: 0;
                     color: var(--neutrals-white, #FFF);
                     text-align: center;
