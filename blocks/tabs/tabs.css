@@ -459,7 +459,6 @@ table>tbody>tr>td:nth-child(7) {
 }
 
 @media(width <=768px) {
-
   .schemename,
   .schemenum {
     height: 70px;
@@ -896,6 +895,7 @@ table>tbody>tr>td:nth-child(7) {
 
 
 /* popular-tab  Start */
+
 /* 
 .section.popular-tab>.tabs-wrapper>.tabs>.popular-tabwrapper {
   display: flex;
@@ -975,7 +975,8 @@ table>tbody>tr>td:nth-child(7) {
 
 
 
-/* Leran Tabs  Start*/
+/* Leran Tabs  Start */
+
 /* 
 .section.learn-tab {
   padding: 40px 0;
@@ -1066,4 +1067,4 @@ table>tbody>tr>td:nth-child(7) {
   }
 } */
 
-/* Leran Tabs  End*/
+/* Leran Tabs  End */

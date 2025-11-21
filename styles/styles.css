@@ -843,6 +843,17 @@ body.noscroll {
     color: var(--text-body);
 }
 
+.coverage-table .coverage-tbody .coverage-tbody-td.coverage-td-1 a {
+    color: var(--neutrals-black);
+    font-feature-settings: var(--font-features-default);
+    font-family: var(--body);
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+    font-weight: 400;
+    display: block;
+    word-break: unset;
+}
+
 .breadcrumbs-fdp>ul.breadul>li.breadli:last-child a {
     color: var(--neutrals-800);
 }
@@ -1134,6 +1145,20 @@ position: relative;
     line-height: var(--body-medium-regular-line-height);
 }
 
+.pan-details-modal p.subpandts2>.input-wrapper>.iptpanfld {
+    padding: 10px 12px;
+    border: var(--border-width-01) solid var(--strokes-default);
+    width: 100%;
+    border-radius: var(--border-radius-8);
+    text-transform: uppercase;
+    color: var(--text-typed-input);
+    font-feature-settings: var(--font-features-default);
+    font-family: var(--body);
+    font-weight: 400;
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+}
+
 .pan-details-modal .default-content-wrapper p.subpandts2>.input-wrapper .iptpanfld {
     border: none;
     outline: none;
@@ -1292,7 +1317,7 @@ position: relative;
 } */
 
 
-.pan-details-modal p.subpandts2>.input-wrapper>.iptpanfld {
+/* .pan-details-modal p.subpandts2>.input-wrapper>.iptpanfld {
     padding: 10px 12px;
     border: var(--border-width-01) solid var(--strokes-default);
     width: 100%;
@@ -1304,7 +1329,7 @@ position: relative;
     font-weight: 400;
     font-size: var(--body-medium-regular-size);
     line-height: var(--body-medium-regular-line-height);
-}
+} */
 
 /* .pan-details-modal p:nth-child(2)>.input-wrapper>input:focus+label {
     top: -8px;
@@ -1640,6 +1665,12 @@ z-index: -1;
     transform: translate(-50%, -50%);
 }
 
+.modal.block.coverage-image-modal .modal-content .default-content-wrapper p picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
 .section.media-coverage.embed-container .embed-wrapper .embed-childitem1 .embed-childinner2 picture,
 .section.media-coverage.embed-container .embed-wrapper .embed-childitem1 .embed-childinner2 picture img {
     line-height: 0;
@@ -1941,7 +1972,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     padding: 16px 132px 16px 8px;
 }
 
-.coverage-table .coverage-tbody .coverage-tbody-td.coverage-td-1 a {
+/* .coverage-table .coverage-tbody .coverage-tbody-td.coverage-td-1 a {
     color: var(--neutrals-black);
     font-feature-settings: var(--font-features-default);
     font-family: var(--body);
@@ -1950,7 +1981,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     font-weight: 400;
     display: block;
     word-break: unset;
-}
+} */
 
 .coverage-table .coverage-tbody .coverage-tbody-td.coverage-td-1 a:active,
 .coverage-table .coverage-tbody .coverage-tbody-td.coverage-td-1 a:focus,
@@ -2000,6 +2031,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     padding: 0;
     max-height: 497px;
     height: auto;
+
     /* max-width: 450px; */
     max-width: 543px;
     width: 100%;
@@ -2035,11 +2067,11 @@ main>.section.media-coverage .default-content-wrapper h6 {
     margin: 0;
 }
 
-.modal.block.coverage-image-modal .modal-content .default-content-wrapper p picture {
+/* .modal.block.coverage-image-modal .modal-content .default-content-wrapper p picture {
     line-height: 0;
     height: 100%;
     display: block;
-}
+} */
 
 /* Media Coverage Image modal end */
 
@@ -2108,6 +2140,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
 
     .maintab>.tab-dropdown-wrap {
         max-width: 100%;
+
         /* margin: 32px 0 24px; */
         padding: 0 14.5px;
         top: 0;
@@ -2251,7 +2284,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     }
 
     .section.media-coverage+.maintab>.tab-dropdown-wrap {
-        padding-top: 0px;
+        padding-top: 0;
         margin-top: 0;
     }
 }
@@ -2378,7 +2411,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
     }
 
     .section.calculators-cards .cal-car1 .cal-car-inner2 .cal-car-sub-inner1 {
-        margin: 0 0 16px 0;
+        margin: 0 0 16px;
     }
 
 
@@ -2386,4 +2419,4 @@ main>.section.media-coverage .default-content-wrapper h6 {
 }
 
 
-/*calculators-cards end*/
+/* calculators-cards end */
