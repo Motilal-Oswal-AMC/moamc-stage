@@ -93,14 +93,6 @@
     margin-right: 16px;
   }
 }
-.section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub1 .icon {
-  width: 24px;
-  height: 24px;
-}
-.section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub1 .icon img {
-  width: 24px;
-  height: 24px;
-}
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub1.input-focused {
   border: 1px solid #2E2A94;
 }
@@ -254,5 +246,11 @@
 @media (max-width: 768px) {
   .section.out-expert-listing.our-experts-container {
     padding-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .section.out-expert-listing.our-experts-container .our-experts-wrapper .our-experts .our-experts-cont1 .our-expert-section1 .our-expert-sub1 {
+    font-size: var(--sub-header-large-size);
+    line-height: 28px;
   }
 }/*# sourceMappingURL=our-experts.css.map */

@@ -310,7 +310,7 @@ if (container) {
 const currentPath = window.location.pathname;
 
 // Define the target path you want to match
-const targetPath = '/wcs/in/en/wcs-previous-studies';
+const targetPath = '/wcs';
 
 // Check if we are on the correct page
 if (currentPath.includes(targetPath)) {
