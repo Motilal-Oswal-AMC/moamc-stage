@@ -86,6 +86,28 @@ export default async function decorate(block) {
   dataMapMoObj.addIndexed(block);
 
   const evenFunc = block.querySelector('.mob-accordion .footer-sub2');
+
+  const getFooterRedirectionSection = evenFunc.querySelector('.footer-sub-cont1');
+  const detailsList = getFooterRedirectionSection.querySelectorAll('details');
+  // Convert <details> to <div>
+  detailsList.forEach((detailsEl) => {
+    const newDiv = document.createElement('div');
+    newDiv.className = detailsEl.className;
+    newDiv.innerHTML = detailsEl.innerHTML;
+
+    detailsEl.replaceWith(newDiv);
+  });
+
+  // Convert <summary> to <h2>
+  const summaryList = getFooterRedirectionSection.querySelectorAll('summary');
+  summaryList.forEach((summaryEl) => {
+    const newH2 = document.createElement('h2');
+    newH2.className = summaryEl.className;
+    newH2.innerHTML = summaryEl.innerHTML;
+
+    summaryEl.replaceWith(newH2);
+  });
+
   const eventv2 = evenFunc.querySelector('.section-content1 .list-items2');
   const eventv3 = eventv2.querySelector('.list-inneritem-1').children;
   Array.from(eventv3).forEach((eventElem) => {
@@ -207,10 +229,10 @@ export default async function decorate(block) {
 
     //   const altText = altTextMap[iconName];
 
-  //   if (altText) {
-  //     image.setAttribute('alt', altText);
-  //   }
-  // });
+    //   if (altText) {
+    //     image.setAttribute('alt', altText);
+    //   }
+    // });
   }
 
   const delay = (ms) => new Promise((resolve) => { setTimeout(resolve, ms); });
@@ -246,9 +268,10 @@ export default async function decorate(block) {
           formem.nextElementSibling.style.display = 'none';
           // inpelm.add('email-success');
         } else {
-          closblock.querySelector('.errormsg').style.display = 'block';
+          closblock.querySelector('.errormsg').style.display = 'contents';
           inpelm.add('email-fail');
-          formem.nextElementSibling.style.display = 'block';
+          formem.nextElementSibling.style.display = 'contents';
+
           // inpelm.remove('email-success');
         }
       });

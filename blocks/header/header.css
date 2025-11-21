@@ -433,10 +433,11 @@ header nav .nav-sections .nav-sec-sec1 .nav-drop {
     padding: 2px 0;
 }
 
-header nav .nav-sections .nav-sec-sec1 .nav-drop p.nav-sec-inner-text1 {
+header nav .nav-sections .nav-sec-sec1 .nav-drop button.nav-sec-inner-text1 {
     font-size: var(--body-medium-semibold-size);
     font-weight: 600;
     line-height: var(--body-medium-semibold-line-height);
+    color:#fff;
 }
 
 header nav .nav-sections .nav-sec-sec1 .nav-drop[aria-expanded="true"] {
@@ -992,7 +993,7 @@ header nav .nav-sections ul>li>ul {
 }
 
 
-header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 p {
+header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 .header-top-inner-text1 {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -1373,7 +1374,7 @@ header nav .header-top .header-top-sub5 {
     line-height: var(--label-large-line-height);
 }
 
-header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 p::after {
+header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 .header-top-inner-text1::after {
     content: "";
     display: block;
     width: 20px;
@@ -1384,7 +1385,7 @@ header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub
     background-size: 100%;
 }
 
-header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 p.active::after {
+header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 .header-top-inner-text1.active::after {
     transform: rotate(180deg);
 }
 
@@ -1930,7 +1931,7 @@ header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub
         gap: 20px;
         margin: 0;
 
-        /* justify-content: flex-end; */
+        justify-content: flex-end;
     }
 
     header nav .nav-sections .nav-sec-cont1 .nav-sec-sec1>li {
@@ -2829,7 +2830,7 @@ header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub
         background-size: 100%;
     }
 
-    header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 p.active::after {
+    header nav .header-top .default-content-wrapper .header-top-sec1 .header-top-sub5 .header-top-inner-text1.active::after {
         transform: rotate(180deg);
     }
 

@@ -75,7 +75,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
   document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
-  nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+  // nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
@@ -83,7 +83,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   if (isDesktop.matches) {
     navDrops.forEach((drop) => {
       if (!drop.hasAttribute('tabindex')) {
-        drop.setAttribute('tabindex', 0);
+        // drop.setAttribute('tabindex', 0);
         drop.addEventListener('focus', focusNavSection);
       }
     });
@@ -182,12 +182,26 @@ export default async function decorate(block) {
       });
     });
   }
-  const dropdownTrigger = navBrand.querySelector('.navbrand-sec3 .navbrand-inner-net1');
+  const getDropdownTrigger = navBrand.querySelector('.navbrand-sec3 .navbrand-inner-net1');
   const dropdownMenu = navBrand.querySelector('.navbrand-sec3 .navbrand-inner-net2');
+
+  const dropdownTrigger = document.createElement('button');
+  dropdownTrigger.className = getDropdownTrigger.className;
+  dropdownTrigger.innerHTML = getDropdownTrigger.innerHTML;
+  // replace the getDropdownTrigger (p) tag with button
+  getDropdownTrigger.replaceWith(dropdownTrigger);
+  // add attr
+  dropdownTrigger.setAttribute('aria-expanded', false);
+  dropdownTrigger.setAttribute('aria-label', dropdownTrigger.innerHTML);
 
   if (dropdownTrigger && dropdownMenu) {
     dropdownTrigger.addEventListener('click', (event) => {
       event.stopPropagation();
+
+      // toggle attr
+      const isExpanded = dropdownTrigger.getAttribute('aria-expanded') === 'true';
+      dropdownTrigger.setAttribute('aria-expanded', !isExpanded);
+
       dropdownMenu.classList.toggle('open');
       dropdownTrigger.classList.toggle('active');
       const logineventab = block.querySelector('.nav-tools .nav-tools-sub4 .nav-tools-inner-net1');
@@ -224,6 +238,22 @@ export default async function decorate(block) {
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
         const hrefnaf = navSection.querySelector('ul li');
+
+        // const oldP = navSection.querySelector('p');
+        // if (oldP) {
+        //   const btn = document.createElement('button');
+
+        //   // copy class + content
+        //   btn.className = oldP.className;
+        //   btn.innerHTML = oldP.innerHTML;
+
+        //   // accessibility (recommended)
+        //   btn.setAttribute('aria-expanded', 'false');
+
+        //   // replace <p> with <button>
+        //   oldP.replaceWith(btn);
+        // }
+
         const frgnav = await loadFragment(hrefnaf.children[0].getAttribute('href'));
         hrefnaf.innerHTML = '';
         // if (frgnav !== null) {
@@ -488,12 +518,25 @@ export default async function decorate(block) {
     dataMapMoObj.addIndexed(headerTop);
   }
   if (headerTop !== null) {
-    const dropTrigger = headerTop.querySelector('.header-top-sec1 .header-top-sub5 .header-top-inner-text1');
+    const getDropTrigger = headerTop.querySelector('.header-top-sec1 .header-top-sub5 .header-top-inner-text1');
     const dropMenu = headerTop.querySelector('.header-top-sec1 .header-top-sub5 .header-top-inner-text2');
+
+    const dropTrigger = document.createElement('button');
+    dropTrigger.className = getDropTrigger.className;
+    dropTrigger.innerHTML = getDropTrigger.innerHTML;
+    // replace the getDropTrigger p tag with button
+    getDropTrigger.replaceWith(dropTrigger);
+
+    dropTrigger.setAttribute('aria-expanded', false);
+    dropTrigger.setAttribute('aria-label', dropTrigger.innerHTML);
 
     if (dropTrigger && dropMenu) {
       dropTrigger.addEventListener('click', (event) => {
         event.stopPropagation();
+        // toggle attr
+        const isExpanded = dropTrigger.getAttribute('aria-expanded') === 'true';
+        dropTrigger.setAttribute('aria-expanded', !isExpanded);
+
         dropMenu.classList.toggle('open');
         dropTrigger.classList.toggle('active');
         const logineventab = block.querySelector('.nav-tools .nav-tools-sub4 .nav-tools-inner-net1');
@@ -613,7 +656,7 @@ export default async function decorate(block) {
     toggleAllNavSections(navSections, 'false');
   });
   nav.prepend(hamburger);
-  nav.setAttribute('aria-expanded', 'false');
+  // nav.setAttribute('aria-expanded', 'false');
   // prevent mobile nav behavior on window resize
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
@@ -704,6 +747,14 @@ export default async function decorate(block) {
   }
 
   const loginevent = block.querySelector('.nav-tools .nav-tools-sub4');// .nav-tools-inner-net1');
+
+  const getLogineventab = loginevent.querySelector('.nav-tools .nav-tools-sub4 .nav-tools-inner-net1');
+  const createLoginbutton = document.createElement('button');
+  createLoginbutton.className = getLogineventab.className;
+  createLoginbutton.innerHTML = getLogineventab.innerHTML;
+  createLoginbutton.setAttribute('aria-label', getLogineventab.innerHTML);
+  getLogineventab.replaceWith(createLoginbutton);
+
   loginevent.addEventListener('click', () => {
     const nextel = loginevent.querySelector('ul');
     if (nextel.style.display === 'none') {
