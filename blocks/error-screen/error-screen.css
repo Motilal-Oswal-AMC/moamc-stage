@@ -1,14 +1,27 @@
 @import "../../../styles/fonts.css";
-.cards.block {
+main .section.cards-container.error-screen-container,
+main.nfo-nav .section.cards-container.error-screen-container {
+  margin: 76px 0;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container,
+  main.nfo-nav .section.cards-container.error-screen-container {
+    margin: 120px 0;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 {
   display: flex;
   justify-content: center;
 }
-.cards.block ul {
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 {
   grid: unset;
   max-width: 752px;
   width: 100%;
 }
-.cards.block ul li {
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist {
   border: unset;
   display: flex;
   flex-direction: column;
@@ -16,20 +29,104 @@
   align-items: center;
   gap: 28px;
 }
-.cards.block ul li .cards-card-image {
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist {
+    gap: 40px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image {
   height: 196px;
   width: 145px;
 }
-.cards.block ul li .cards-card-image img {
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image {
+    height: 160px;
+    width: 110px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image img.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image img.comlist {
   aspect-ratio: unset;
 }
-.cards.block ul li .cards-card-body {
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body {
   margin: unset;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 12px;
   text-align: center;
 }
-.cards.block ul li .cards-card-body p {
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.comlist {
   margin: unset;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1 {
+  color: var(--blue-1-800-primary);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--title);
+  font-size: var(--heading-h3-size);
+  font-weight: 600;
+  line-height: var(--heading-h3-line-height);
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap {
+  color: var(--neutrals-600);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--Body, Inter);
+  font-size: var(--body-medium-medium-size);
+  font-weight: 500;
+  line-height: var(--body-medium-medium-line-height);
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap {
+    font-size: var(--body-small-medium-size);
+    line-height: var(--body-small-medium-line-height);
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container {
+  order: 2;
+  height: 40px;
+  width: 154px;
+  margin: 20px 0 0;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container {
+    margin: 1px 0 0;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1 {
+  color: var(--text-white);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--body);
+  font-size: var(--button-medium-size);
+  font-weight: 500;
+  line-height: var(--button-medium-line-height);
+  border-radius: var(--border-radius-8);
+  background: var(--button-primary-default);
+  margin: unset;
+  padding: 12px;
+  border: unset;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1 {
+    font-size: var(--button-medium-size);
+    line-height: var(--button-medium-line-height);
+  }
 }/*# sourceMappingURL=error-screen.css.map */
