@@ -25,6 +25,7 @@
 
             @include media (mobile) {
                 font-size: var(--sub-header-large-size, 24px);
+
                 // line-height: var(--sub-header-medium-line-height, 28px);
                 line-height: 28px;
             }
@@ -39,6 +40,7 @@
             font-size: var(--body-medium-regular-size, 16px);
             font-style: normal;
             font-weight: 400;
+
             // line-height: var(--body-medium-regular-line-height, 24px);
             line-height: 24px;
 
@@ -53,7 +55,7 @@
         .our-invest-sec1 {
             ul {
                 grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-                grid-gap: 16px;
+                gap: 16px;
 
                 @include media (mobile) {
                     display: flex;
@@ -62,11 +64,11 @@
                 }
 
                 li {
-                    display: flex;
                     flex-direction: column-reverse;
                     display: flex;
                     height: 240px;
                     padding: 24px 0 0 16px;
+
                     // gap: 36px;
                     border-radius: 12px;
                     background: var(--neutrals-100, #F5F5F5);
@@ -80,7 +82,7 @@
                         img {
                             width: 240px;
                             height: 172px;
-                            border-radius: 0 0 9px 0;
+                            border-radius: 0 0 9px;
                             object-fit: contain;
                             object-position: bottom;
                         }
@@ -95,10 +97,12 @@
                             color: var(--neutrals-900, #212121);
                             font-feature-settings: var(--font-features-default);
                             font-family: var(--body, Inter);
+
                             // font-size: var(--sub-header-medium-size, 20px);
                             font-size: 20px;
                             font-style: normal;
                             font-weight: 500;
+
                             // line-height: var(--sub-header-medium-line-height, 28px);
                             line-height: 28px;
 
@@ -117,18 +121,19 @@
     .our-invest-cont3 {
         padding-top: 40px;
 
-        p {
-            color: var(--Text-Body, #424242);
+        p.comlist {
+            color: var(--text-body, #424242);
             text-align: center;
             font-feature-settings: var(--font-features-default);
             font-family: var(--body, Inter);
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
+
             // line-height: var(--body-medium-regular-line-height, 24px);
             line-height: 24px;
             margin: 0;
-            padding: 0px 127px;
+            padding: 0 127px;
 
             @include media (tab) {
                 padding: 0;
