@@ -302,22 +302,11 @@
         "description": "Expected annual return rate for calculations"
       },
       {
-        "component": "text",
-        "name": "col4-cta-button-text",
-        "label": "CTA Button Text",
-        "value": "Start SIP"
-      },
-      {
-        "component": "text",
-        "name": "col5_other-calculators-text",
-        "label": "Other Calculators Link Text",
-        "value": "View other calculators"
-      },
-      {
-        "component": "text",
-        "name": "col5_other-calculators-url",
-        "label": "Other Calculators URL",
-        "value": "#"
+        "component": "richtext",
+        "name": "col4_text",
+        "value": "",
+        "label": "CTA Button Text & Other Calculators Link Text and URL content ",
+        "valueType": "string"
       }
     ]
   },
