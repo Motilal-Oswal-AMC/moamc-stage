@@ -42,7 +42,7 @@
   max-width: 1232px;
   width: 100%;
   margin: 78px auto 0;
-  padding: 68px 0 48px;
+  padding: 24px 0 40px;
   display: flex;
   gap: 30px;
   justify-content: space-between;
@@ -94,7 +94,7 @@ main.nfo-nav .main-wrapper .section:first-of-type {
 /* Investor Education - Podcast Details Start */
 
 .section.article-sub-left .default-content-wrapper {
-  padding: var(--spacing-24) 0 0;
+  padding: var(--spacing-24) 0;
 }
 
 .section.article-sub-right.stay-updated ul {
