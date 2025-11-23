@@ -334,6 +334,7 @@ main.nfo-nav .main-wrapper .section:first-of-type {
     padding: 2px 0;
     border: none;
     background-color: transparent;
+    width: 100%;
 }
 
 .article-sub-right.subscribe-email .default-content-wrapper .email-wrapper input::placeholder {
@@ -552,31 +553,44 @@ main.nfo-nav .main-wrapper .section:first-of-type {
     height: 12px;
 }
 
+.section.future-building-container.article-detail-library {
+    margin: 40px auto;
+}
+
+.section.future-building-container.article-detail-library .library-btn3 {
+    top: 14px;
+}
+
 @media screen and (width <=1299px) {
-    .main-wrapper {
-        padding: 68px 16px 40px;
+    .section.main-wrapper {
+        padding: 24px 16px 40px;
+    }
+
+    .section.article-right-wrapper,
+    .section.article-left-wrapper {
+        padding: 0;
+    }
+    
+    .section.article-left-wrapper {
+        max-width: 68%;
+    }
+
+    .section.article-right-wrapper{
+        max-width: 26%;
     }
 }
 
 @media screen and (width<=768px) {
-    /* .section.article-left-wrapper {
-        max-width: 100%;
-    }
-
-    .section.article-right-wrapper {
-        max-width: 100%;
-    } */
-
     .section.main-wrapper {
         max-width: 100%;
         flex-direction: column;
         gap: var(--spacing-40);
-        padding: 0 0 40px;
+        padding: 0 16px 40px;
     }
 
 
-    .article-left-wrapper,
-    .article-right-wrapper {
+    .section.article-left-wrapper,
+    .section.article-right-wrapper {
         max-width: 100%;
     }
 
