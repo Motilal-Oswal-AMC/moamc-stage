@@ -138,4 +138,21 @@ export default function decorate(block) {
       mainwrapper.append(divwrapper);
     }
   }
+
+  /* NRI Wrapper Js  Start*/
+
+  const nriAccordion = block.closest('.nri-accordion'); 
+
+  const wrapperAccordion = document.createElement("div");
+  wrapperAccordion.classList.add("faq-our-fund")
+  
+  const allChild =Array.from(nriAccordion.children);
+  allChild.forEach((childs)=>{
+     wrapperAccordion.append(childs)
+  })
+  
+  nriAccordion.append(wrapperAccordion)
+
+  
+  /* NRI Wrapper Js  End*/
 }
