@@ -1,8 +1,6 @@
 /*   alpha-value-notation */
 /* media-feature-range-notation */
 @import "../../../styles/fonts.css";
-@import "../blocks/moedge-article-details/moedge-article-details.css";
-@import '../blocks/Investor-details/investor-details.css';
 .section.download {
   width: 100%;
   max-width: 100%;
