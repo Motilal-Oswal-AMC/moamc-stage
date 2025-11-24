@@ -14,11 +14,6 @@ main.nfo-nav .section.decoding-qglp-container {
   width: 100%;
   padding-top: 40px;
 }
-@media (max-width: 768px) {
-  .section .decoding-qglp-wrapper {
-    padding-top: 56px;
-  }
-}
 .section .decoding-qglp-wrapper .decoding-qglp {
   display: flex;
   justify-content: space-between;

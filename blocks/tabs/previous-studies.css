@@ -37,7 +37,7 @@ main.nfo-nav .previous-studies-ctn.section:first-of-type {
 }
 @media (max-width: 768px) {
   .previous-studies-ctn.tabs-container .default-content-wrapper.previous-studies-ex1 {
-    padding: 56px 16px 32px;
+    padding: 40px 16px 32px;
     margin-top: 0;
   }
 }

@@ -2271,7 +2271,7 @@ main>.section.media-coverage .default-content-wrapper h6 {
 /* media-coverage start */
 @media screen and (width <=768px) {
     main.nfo-nav>.section.media-coverage {
-        margin: 24px auto 0;
+        margin: 40px auto 0;
     }
 
     .nfo-nav>.section.media-coverage+.maintab .innerdiv .tabs-list {
