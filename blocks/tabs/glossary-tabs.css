@@ -95,6 +95,24 @@
   min-width: 88px;
   width: 88px;
   height: 93px;
+  position: relative;
+  background-image: url("../../icons/c-icon.svg");
+  background-size: 88px 93px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--heading-h1-size);
+  line-height: var(--heading-h1-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .glossary-tabs.our-experts-container .tabs-wrapper .tabs-panel .tab-inner1 .tab-subinner1 .tab-child1 .tab-subchild1 .tab-itemmain1 {
+    font-size: 48px;
+    line-height: 56px;
+  }
 }
 .glossary-tabs.our-experts-container .tabs-wrapper .tabs-panel .tab-inner1 .tab-subinner1 .tab-child1 .tab-subchild1 .tab-itemmain1 .tab-subitem1 {
   width: 100%;

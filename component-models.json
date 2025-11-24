@@ -363,10 +363,6 @@
             "value": "nfo-banner"
           },
           {
-            "name": "Show Contact Error",
-            "value": "show-contact-error"
-          },
-          {
             "name": "Out Expert Listing",
             "value": "out-expert-listing"
           },
@@ -653,6 +649,30 @@
           {
             "name": "Article Detail Library",
             "value": "article-detail-library"
+          },
+          {
+            "name": "Screen 400",
+            "value": "screen-400"
+          },
+          {
+            "name": "Screen 401",
+            "value": "screen-401"
+          },
+          {
+            "name": "Screen 403",
+            "value": "screen-403"
+          },
+          {
+            "name": "Screen 408",
+            "value": "screen-408"
+          },
+          {
+            "name": "Screen 500",
+            "value": "screen-500"
+          },
+          {
+            "name": "Service Screen",
+            "value": "service-screen"
           }
         ]
       },

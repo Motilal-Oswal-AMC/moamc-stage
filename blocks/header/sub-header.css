@@ -146,6 +146,7 @@ header .header.wealth-header .nav-wrapper nav[aria-expanded=true] .nav-sections 
 }
 header .header.wealth-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 {
   justify-content: flex-end;
+  align-items: flex-start;
 }
 @media (max-width: 768px) {
   header .header.wealth-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 {
@@ -162,6 +163,7 @@ header .header.wealth-header .nav-wrapper nav[aria-expanded=true] .nav-sections 
   header .header.wealth-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 .nav-drop {
     padding: 0;
     line-height: 0;
+    gap: unset;
   }
 }
 @media (max-width: 768px) {

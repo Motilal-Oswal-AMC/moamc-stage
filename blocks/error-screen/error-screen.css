@@ -1,0 +1,192 @@
+@import "../../../styles/fonts.css";
+main .section.cards-container.error-screen-container,
+main.nfo-nav .section.cards-container.error-screen-container {
+  padding-top: 76px;
+  margin: 76px 0;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container,
+  main.nfo-nav .section.cards-container.error-screen-container {
+    margin: 59px 0 120px 0;
+    padding-top: 120px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 {
+  display: flex;
+  justify-content: center;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 {
+  grid: unset;
+  max-width: 752px;
+  width: 100%;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist {
+  border: unset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist {
+    gap: 40px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image img.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image img.comlist {
+  aspect-ratio: unset;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body {
+  margin: unset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.comlist,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.comlist {
+  margin: unset;
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1 {
+  color: var(--blue-1-800-primary);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--title);
+  font-size: var(--heading-h3-size);
+  font-weight: 600;
+  line-height: var(--heading-h3-line-height);
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscrn-cont1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap {
+  color: var(--neutrals-600);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--body);
+  font-size: var(--body-medium-medium-size);
+  font-weight: 500;
+  line-height: var(--body-medium-medium-line-height);
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body .errscn-txtwrap {
+    font-size: var(--body-small-medium-size);
+    line-height: var(--body-small-medium-line-height);
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container {
+  order: 2;
+  height: 40px;
+  width: 154px;
+  margin: 20px 0 0;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container {
+    margin: 1px 0 0;
+  }
+}
+main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1,
+main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1 {
+  color: var(--text-white);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-family: var(--body);
+  font-size: var(--button-medium-size);
+  font-weight: 500;
+  line-height: var(--button-medium-line-height);
+  border-radius: var(--border-radius-8);
+  background: var(--button-primary-default);
+  margin: unset;
+  padding: 12px;
+  border: unset;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1,
+  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1 {
+    font-size: var(--button-medium-size);
+    line-height: var(--button-medium-line-height);
+  }
+}
+
+.error-screen-container.screen-400 .errscrn-img-cont1 {
+  height: 196px;
+  width: 145px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.screen-400 .errscrn-img-cont1 {
+    height: 160px;
+    width: 110px;
+  }
+}
+
+.error-screen-container.screen-401 .errscrn-img-cont1 {
+  height: 196px;
+  width: 112px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.screen-401 .errscrn-img-cont1 {
+    height: 160px;
+    width: 92px;
+  }
+}
+
+.error-screen-container.screen-403 .errscrn-img-cont1 {
+  height: 196px;
+  width: 121px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.screen-403 .errscrn-img-cont1 {
+    height: 160px;
+    width: 99px;
+  }
+}
+
+.error-screen-container.screen-408 .errscrn-img-cont1 {
+  height: 196px;
+  width: 132px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.screen-408 .errscrn-img-cont1 {
+    height: 160px;
+    width: 108px;
+  }
+}
+
+.error-screen-container.screen-500 .errscrn-img-cont1 {
+  height: 196px;
+  width: 156px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.screen-500 .errscrn-img-cont1 {
+    height: 160px;
+    width: 127px;
+  }
+}
+
+.error-screen-container.service-screen .cards .cards-card-image {
+  height: 196px;
+  width: 144px;
+}
+@media (max-width: 768px) {
+  .error-screen-container.service-screen .cards .cards-card-image {
+    height: 160px;
+    width: 117px;
+  }
+}/*# sourceMappingURL=error-screen.css.map */
