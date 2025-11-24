@@ -282,10 +282,10 @@ export default function decorate(block) {
           headers,
         );
 
-        const result = await response.json();
+        const result = await response //.json();
         // console.log('API Response:', result);
 
-        if (response.ok) {
+        if (result) {
           alert('Your details have been submitted successfully!');
           // Reset form
           fields.forEach((f) => {
