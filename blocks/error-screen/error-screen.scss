@@ -5,10 +5,11 @@
 
 main .section.cards-container.error-screen-container,
 main.nfo-nav .section.cards-container.error-screen-container {
+  padding-top: 76px;
   margin: 76px 0;
 
   @include media(mobile) {
-    margin: 120px 0;
+    margin: 59px 0 120px 0;
   }
 
   .cards.error-screen-wrap1 {
@@ -33,12 +34,12 @@ main.nfo-nav .section.cards-container.error-screen-container {
         }
 
         .cards-card-image {
-          height: 196px;
-          width: 145px;
+          // height: 196px;
+          // width: 145px;
 
           @include media(mobile) {
-            height: 160px;
-            width: 110px;
+            // height: 160px;
+            // width: 110px;
           }
 
           img.comlist {
@@ -108,6 +109,7 @@ main.nfo-nav .section.cards-container.error-screen-container {
               margin: unset;
               padding: 12px;
               border: unset;
+              height: 40px;
 
               @include media(mobile) {
                 font-size: var(--button-medium-size);
@@ -116,6 +118,81 @@ main.nfo-nav .section.cards-container.error-screen-container {
             }
           }
         }
+      }
+    }
+  }
+}
+
+// to change the image for error screen
+.error-screen-container#screen-400 {
+  .errscrn-img-cont1 {
+    height: 196px;
+    width: 145px;
+
+    @include media(mobile) {
+      height: 160px;
+      width: 110px;
+    }
+  }
+}
+
+.error-screen-container#screen-401 {
+  .errscrn-img-cont1 {
+    height: 196px;
+    width: 112px;
+
+    @include media(mobile) {
+      height: 160px;
+      width: 92px;
+    }
+  }
+}
+
+.error-screen-container#screen-403 {
+  .errscrn-img-cont1 {
+    height: 196px;
+    width: 121px;
+
+    @include media(mobile) {
+      height: 160px;
+      width: 99px;
+    }
+  }
+}
+
+.error-screen-container#screen-408 {
+  .errscrn-img-cont1 {
+    height: 196px;
+    width: 132px;
+
+    @include media(mobile) {
+      height: 160px;
+      width: 108px;
+    }
+  }
+}
+
+.error-screen-container#screen-500 {
+  .errscrn-img-cont1 {
+    height: 196px;
+    width: 156px;
+
+    @include media(mobile) {
+      height: 160px;
+      width: 127px;
+    }
+  }
+}
+
+.error-screen-container#service-screen {
+  .cards {
+    .cards-card-image {
+      height: 196px;
+      width: 144px;
+
+      @include media(mobile) {
+        height: 160px;
+        width: 117px;
       }
     }
   }

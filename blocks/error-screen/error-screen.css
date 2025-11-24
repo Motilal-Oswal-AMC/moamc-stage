@@ -1,12 +1,13 @@
 @import "../../../styles/fonts.css";
 main .section.cards-container.error-screen-container,
 main.nfo-nav .section.cards-container.error-screen-container {
+  padding-top: 76px;
   margin: 76px 0;
 }
 @media (max-width: 768px) {
   main .section.cards-container.error-screen-container,
   main.nfo-nav .section.cards-container.error-screen-container {
-    margin: 120px 0;
+    margin: 59px 0 120px 0;
   }
 }
 main .section.cards-container.error-screen-container .cards.error-screen-wrap1,
@@ -33,18 +34,6 @@ main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen
   main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist,
   main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist {
     gap: 40px;
-  }
-}
-main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image,
-main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image {
-  height: 196px;
-  width: 145px;
-}
-@media (max-width: 768px) {
-  main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image,
-  main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image {
-    height: 160px;
-    width: 110px;
   }
 }
 main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-image img.comlist,
@@ -122,11 +111,78 @@ main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen
   margin: unset;
   padding: 12px;
   border: unset;
+  height: 40px;
 }
 @media (max-width: 768px) {
   main .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1,
   main.nfo-nav .section.cards-container.error-screen-container .cards.error-screen-wrap1 ul.error-screen-ul1 li.comlist .cards-card-body p.button-container a.errscrn-inner-cont1 {
     font-size: var(--button-medium-size);
     line-height: var(--button-medium-line-height);
+  }
+}
+
+.error-screen-container#screen-400 .errscrn-img-cont1 {
+  height: 196px;
+  width: 145px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#screen-400 .errscrn-img-cont1 {
+    height: 160px;
+    width: 110px;
+  }
+}
+
+.error-screen-container#screen-401 .errscrn-img-cont1 {
+  height: 196px;
+  width: 112px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#screen-401 .errscrn-img-cont1 {
+    height: 160px;
+    width: 92px;
+  }
+}
+
+.error-screen-container#screen-403 .errscrn-img-cont1 {
+  height: 196px;
+  width: 121px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#screen-403 .errscrn-img-cont1 {
+    height: 160px;
+    width: 99px;
+  }
+}
+
+.error-screen-container#screen-408 .errscrn-img-cont1 {
+  height: 196px;
+  width: 132px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#screen-408 .errscrn-img-cont1 {
+    height: 160px;
+    width: 108px;
+  }
+}
+
+.error-screen-container#screen-500 .errscrn-img-cont1 {
+  height: 196px;
+  width: 156px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#screen-500 .errscrn-img-cont1 {
+    height: 160px;
+    width: 127px;
+  }
+}
+
+.error-screen-container#service-screen .cards .cards-card-image {
+  height: 196px;
+  width: 144px;
+}
+@media (max-width: 768px) {
+  .error-screen-container#service-screen .cards .cards-card-image {
+    height: 160px;
+    width: 117px;
   }
 }/*# sourceMappingURL=error-screen.css.map */
