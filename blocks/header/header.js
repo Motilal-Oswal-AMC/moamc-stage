@@ -509,6 +509,7 @@ export default async function decorate(block) {
     ];
     dataMapMoObj.addIndexed(navTools);
   }
+  
   const headerTop = nav.querySelector('.section.header-top');
   if (headerTop) {
     dataMapMoObj.CLASS_PREFIXES = [
