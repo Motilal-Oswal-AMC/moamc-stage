@@ -679,17 +679,24 @@
 }
 .section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results {
   position: absolute;
+  left: 0;
   top: 45px;
   display: block;
   background-color: var(--neutrals-white);
   border: 1px solid var(--neutrals-200);
   border-radius: 6px;
-  width: 96.9%;
+  width: 100%;
   margin: 4px 0 0;
-  max-height: 300px;
+  max-height: 220px;
+  height: auto;
   overflow: auto;
   z-index: 10;
   margin-right: 16px;
+}
+@media (max-width: 768px) {
+  .section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results {
+    width: 100%;
+  }
 }
 .section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results::-webkit-scrollbar {
   width: 3px;
@@ -717,9 +724,6 @@
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: 400;
-}
-.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results .result-item:last-child {
-  padding-bottom: unset;
 }
 .section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results .no-results-message {
   font-size: var(--body-small-regular-size);
