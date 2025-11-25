@@ -677,6 +677,10 @@
           {
             "name": "Investor Listing Edge Filter",
             "value": "listing-edge-filter"
+          },
+          {
+            "name": "Investor Listing Our Expert",
+            "value": "listing-our-expert"
           }
         ]
       },
