@@ -254,8 +254,10 @@ export default function decorate(block) {
 
           // Batch image processing
           const images = element.querySelectorAll('img');
-          Array.from(images).forEach((img) => {
-            dataMapMoObj.altFunction(img, `subbinner-${index + 1}-img`);
+          Array.from(images).forEach((imgelement) => {
+            dataMapMoObj.altFunction(imgelement, `subbinner-${index + 1}-img`);
+            imgelement.loading = 'eager';
+            imgelement.fetchPriority = 'high';
           });
 
           // Use CSS class instead of inline style for better performance
