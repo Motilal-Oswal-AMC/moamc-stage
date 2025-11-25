@@ -273,7 +273,7 @@
 
 // WCS Landing Scss Start
 main .section.wcs-landing.section.embed-container {
-  margin-top: 21px;
+  margin-top: 32px;
 
   @include media (mobile) {
     margin-top: 0;
@@ -432,7 +432,7 @@ main>.section.previous-studies-tab.tabs-container {
   }
 
   >.default-content-wrapper:first-child {
-    padding-top: 16px;
+    padding-top: 27px;
 
     @include media(mobile) {
       padding-top: 40px;
@@ -520,7 +520,7 @@ main>.section.previous-studies-tab.tabs-container {
     right: 0;
     cursor: pointer;
     top: 8px;
-    padding: 61px 0;
+    padding: 67px 0;
 
     @include media(mobile) {
       width: 100%;
