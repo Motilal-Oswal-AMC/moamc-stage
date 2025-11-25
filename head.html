@@ -8,7 +8,11 @@
 <script>
      if (window.location.pathname.includes('/investor-education/all-articles')) {
     document.write('<link rel="stylesheet" href="/blocks/Investor-details/investor-details.css" />');
-  } else if(window.location.href.includes('/motilal-oswal-edge/')){
+  }  
+  if(window.location.href.includes('/motilal-oswal-edge/')){
     document.write('<link rel="stylesheet" href="/blocks/moedge-article-details/moedge-article-details.css" />');
+  } 
+  if (window.location.href.includes('/error-screen/')) {
+    document.write('<link rel="stylesheet" href="/blocks/error-screen/error-screen.css" />');
   }
 </script>
