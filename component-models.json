@@ -673,6 +673,10 @@
           {
             "name": "Service Screen",
             "value": "service-screen"
+          },
+          {
+            "name": "Investor Listing Edge Filter",
+            "value": "listing-edge-filter"
           }
         ]
       },

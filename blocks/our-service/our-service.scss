@@ -231,17 +231,25 @@ main > .section.our-service-container {
 
           &[aria-selected="true"] {
             border-radius: 8px;
-            border: 1px solid #b9bbff;
+
+            // border: 1px solid #b9bbff;
+            border: 1px solid transparent;
             box-shadow: 0 0 8px 0 rgb(0 0 0 / 6%);
             display: flex;
 
             // width: 608px;
             padding: 32px 16px;
             gap: 4px;
-            background:
-              linear-gradient(var(--neutrals-white), var(--neutrals-white)) padding-box,
-              linear-gradient(135deg, var(--card-stroke) 0%, var(--neutrals-white) 50%, var(--card-stroke) 100%)
-                border-box;
+
+            // background:
+            //   linear-gradient(var(--neutrals-white), var(--neutrals-white)) padding-box,
+            //   linear-gradient(135deg, var(--card-stroke) 0%, var(--neutrals-white) 50%, var(--card-stroke) 100%)
+            //     border-box;
+
+            background-image:
+              linear-gradient(#fff, #fff), linear-gradient(45deg, #fff 0%, #b9bbff 30%, #b9bbff 70%, #fff 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
 
             @include media(mobile) {
               padding: 20px 16px;
@@ -407,7 +415,7 @@ main > .section.our-service-container {
                 gap: 20px;
                 list-style: none;
 
-                @include media(mobile){
+                @include media(mobile) {
                   margin: 16px 0 0;
                   gap: 16px;
                 }
@@ -430,7 +438,7 @@ main > .section.our-service-container {
                       var(--body)
                     );
 
-                    @include media(mobile){
+                    @include media(mobile) {
                       font-size: var(--button-medium-size);
                       line-height: var(--button-medium-line-height);
                     }
@@ -454,7 +462,7 @@ main > .section.our-service-container {
                       var(--body)
                     );
 
-                    @include media(mobile){
+                    @include media(mobile) {
                       font-size: var(--body-xsmall-regular-size);
                       line-height: var(--body-xsmall-regular-line-height);
                     }

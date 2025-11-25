@@ -111,6 +111,7 @@ main > .section.investing-terms-container {
           background: var(--neutrals-white);
           font-style: normal;
           margin: 0;
+          cursor: pointer;
 
           @include font-style(
             var(--label-small-size),

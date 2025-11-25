@@ -244,7 +244,8 @@
                         border-radius: 6px;
                         width: 100%;
                         margin: 4px 0 0;
-                        height: 220px;
+                        max-height: 220px;
+                        height: auto;
                         overflow: auto;
                         z-index: 10;
                         margin-right: 16px;
@@ -284,9 +285,9 @@
                                 font-weight: 400;
                             }
 
-                            &:last-child {
-                                padding-bottom: unset;
-                            }
+                            // &:last-child {
+                            //     padding-bottom: unset;
+                            // }
                         }
 
                         .no-results-message {
