@@ -730,6 +730,8 @@
                         var(--body)
                     );
 
+                    cursor: auto;
+
                     @include media(mobile) {
                         font-size: var(--body-medium-regular-size);
                         line-height: var(--body-medium-regular-line-height);
