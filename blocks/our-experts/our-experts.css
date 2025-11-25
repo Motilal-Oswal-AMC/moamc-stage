@@ -256,4 +256,10 @@
     font-size: var(--sub-header-large-size);
     line-height: 28px;
   }
+}
+
+@media (max-width: 768px) {
+  .section.our-experts-container.listing-our-expert {
+    margin: 24px auto var(--spacing-40);
+  }
 }/*# sourceMappingURL=our-experts.css.map */

@@ -181,7 +181,11 @@ export default async function decorate(block) {
 
       // Add the click event listener to redirect to the home page.
       container.addEventListener('click', () => {
-        window.location.href = `${window.location.origin}/mutual-fund/in/en/home-page`;
+        if (window.location.href.includes('/wcs/')) {
+          window.location.href = `${window.location.origin}/wcs/in/en/wcs-landing-d`;
+        } else {
+          window.location.href = `${window.location.origin}/mutual-fund/in/en/home-page`;
+        }
       });
     });
   }

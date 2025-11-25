@@ -77,7 +77,11 @@ header .header.wealth-header .nav-wrapper .nav-brand .navbrand-cont1 .navbrand-s
     aspect-ratio: 64/26.09;
   }
 }
+header .header.wealth-header .nav-wrapper nav {
+  max-width: 1232px;
+}
 header .header.wealth-header .nav-wrapper nav[aria-expanded=true] {
+  max-width: 1232px;
   height: auto;
   display: flex;
   align-items: center;

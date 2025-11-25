@@ -656,6 +656,7 @@
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: 400;
+  cursor: auto;
 }
 @media (max-width: 768px) {
   .section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-label,
@@ -669,7 +670,7 @@
   border: none;
   outline: none;
 }
-.section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp:focus + label {
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp.active + label, .section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp:focus + label {
   top: 0;
   left: 25px;
   padding: 0 4px;
@@ -682,7 +683,7 @@
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp:focus + label {
+  .section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp.active + label, .section.key-investing.future-building-container .library-btn1 .keyinvest-search .keyinvest-inp:focus + label {
     font-size: var(--text-link-xsmall-size);
     line-height: var(--text-link-xsmall-line-height);
   }
@@ -693,6 +694,67 @@
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.2s ease;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results {
+  position: absolute;
+  left: 0;
+  top: 45px;
+  display: block;
+  background-color: var(--neutrals-white);
+  border: 1px solid var(--neutrals-200);
+  border-radius: 6px;
+  width: 100%;
+  margin: 4px 0 0;
+  max-height: 220px;
+  height: auto;
+  overflow: auto;
+  z-index: 10;
+  margin-right: 16px;
+}
+@media (max-width: 768px) {
+  .section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results {
+    width: 100%;
+  }
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results::-webkit-scrollbar {
+  width: 3px;
+  background-color: #464343;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results::-webkit-scrollbar-thumb {
+  width: 3px;
+  background-color: #424242;
+  border-radius: 0 1px 1px 0;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results::-webkit-scrollbar-track {
+  width: 3px;
+  background-color: var(--neutrals-white);
+  border-radius: 0 6px 6px 0;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results .result-item {
+  margin: unset;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results .result-item .list {
+  font-size: var(--body-small-regular-size);
+  line-height: var(--label-large-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: 400;
+}
+.section.key-investing.future-building-container .library-btn1 .keyinvest-search .key-search-results .no-results-message {
+  font-size: var(--body-small-regular-size);
+  line-height: var(--label-large-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
+  font-feature-settings: var(--font-features-default);
+  font-weight: 400;
+  position: relative;
+  top: 0;
+  padding-left: 13px;
+  border: none;
+  z-index: 10;
 }
 @media (max-width: 768px) {
   .section.key-investing.future-building-container .library-btn2 {
@@ -920,7 +982,12 @@
   }
 }
 @media (max-width: 768px) {
-  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h1, .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h2, .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h3, .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h4, .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h5, .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h6 {
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h1,
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h2,
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h3,
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h4,
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h5,
+  .section.section.key-investing.future-building-container.landing-key-investing .library-btn1 h6 {
     font-size: var(--sub-header-large-size);
     line-height: 28px;
     text-align: center;

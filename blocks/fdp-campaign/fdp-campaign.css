@@ -71,7 +71,7 @@
 
 @media (max-width: 768px) {
   .section.fdp-campaign-container.investor-banner.listing-investor-banner {
-    margin: -24px 16px 0;
+    margin: 0 0 40px;
   }
 }
 

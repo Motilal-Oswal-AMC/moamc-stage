@@ -367,6 +367,12 @@
     }
 }
 
+.section.our-experts-container.listing-our-expert{
+    @include media(mobile){
+        margin: 24px auto var(--spacing-40);
+    }
+}
+
 // .section.out-expert-listing.our-experts-container {
 //     .our-experts-wrapper {
 //         .our-experts {

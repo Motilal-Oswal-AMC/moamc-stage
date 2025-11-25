@@ -141,41 +141,41 @@ export default function decorate(block) {
       },
     };
   } else {
-    const leftarrow = document.createElement('div');
-    leftarrow.classList.add('swiper-button-prev');
-    block.appendChild(leftarrow);
-    const rightarrow = document.createElement('div');
-    rightarrow.classList.add('swiper-button-next');
-    block.appendChild(rightarrow);
-    const pagination = document.createElement('div');
-    pagination.classList.add('swiper-pagination');
-    const navigationWrap = document.createElement('div');
-    navigationWrap.classList.add('navigate-wrap');
-    navigationWrap.append(leftarrow, pagination, rightarrow);
-    // block.appendChild(pagination);
-    block.appendChild(navigationWrap);
-    config = {
-      slidesPerView: 'auto',
-      // spaceBetween: 12,
-      loop: true,
-      navigation: {
-        nextEl: block.querySelector('.swiper-button-next'),
-        prevEl: block.querySelector('.swiper-button-prev'),
-      }, // will be false if no buttons
-      pagination: {
-        el: block.querySelector('.swiper-pagination'), // Selector for your pagination container
-        clickable: true, // Makes pagination bullets clickable
-        renderBullet(index, className) {
-          // Customize the bullet content to display numbers
-          return `<span class="${className}">${index + 1}</span>`;
-        },
-      },
-      // breakpoints: {
-      //   769: {
-      //     spaceBetween: 16,
-      //   },
-      // },
-    };
+    // const leftarrow = document.createElement('div');
+    // leftarrow.classList.add('swiper-button-prev');
+    // block.appendChild(leftarrow);
+    // const rightarrow = document.createElement('div');
+    // rightarrow.classList.add('swiper-button-next');
+    // block.appendChild(rightarrow);
+    // const pagination = document.createElement('div');
+    // pagination.classList.add('swiper-pagination');
+    // const navigationWrap = document.createElement('div');
+    // navigationWrap.classList.add('navigate-wrap');
+    // navigationWrap.append(leftarrow, pagination, rightarrow);
+    // // block.appendChild(pagination);
+    // block.appendChild(navigationWrap);
+    // config = {
+    //   slidesPerView: 'auto',
+    //   // spaceBetween: 12,
+    //   loop: true,
+    //   navigation: {
+    //     nextEl: block.querySelector('.swiper-button-next'),
+    //     prevEl: block.querySelector('.swiper-button-prev'),
+    //   }, // will be false if no buttons
+    //   pagination: {
+    //     el: block.querySelector('.swiper-pagination'), // Selector for your pagination container
+    //     clickable: true, // Makes pagination bullets clickable
+    //     renderBullet(index, className) {
+    //       // Customize the bullet content to display numbers
+    //       return `<span class="${className}">${index + 1}</span>`;
+    //     },
+    //   },
+    //   // breakpoints: {
+    //   //   769: {
+    //   //     spaceBetween: 16,
+    //   //   },
+    //   // },
+    // };
 
     // creating Sear Box for Key Investing
     const keyInvestSection = block.closest('.section');
@@ -187,6 +187,22 @@ export default function decorate(block) {
         label({ class: 'keyinvest-label', for: 'keyinvest' }, 'Search here'),
       );
       keyInvestSearchWrap.append(keyInvestSearch);
+    }
+
+    // Key Investing Pagination
+    if (block.closest('main').querySelector('.key-investing')) {
+    // Find the container that has your special classes
+      const mainContainer = block.closest('main')
+        .querySelector('.key-investing .future-building');
+      // Only run this pagination logic if we are in the correct block
+      if (mainContainer) {
+        // Select all the card items
+        const items = Array.from(mainContainer.querySelectorAll('.swiper-slide'));
+        const itemsPerPage = items.slice(0, 9).length;
+        if (items.length >= itemsPerPage) {
+          dataMapMoObj.setupPagination(mainContainer, items, itemsPerPage);
+        }
+      }
     }
   }
   Swiper(block, config);
@@ -207,9 +223,7 @@ export default function decorate(block) {
     }
   });
 
-
   //  START SEARCH FUNCTIONALITY
-
 
   const keySearchSection = document.querySelector('.key-investing .keyinvest-search');
   const keySearchNewEle = document.createElement('div');
@@ -263,10 +277,9 @@ export default function decorate(block) {
       });
 
       const uniqueTitleAry = [...new Set(titleAry)];
-      console.log("Titles Array:", uniqueTitleAry);
+      console.log('Titles Array:', uniqueTitleAry);
 
       uniqueTitleAry.forEach((value) => {
-
         const newItem = document.createElement('p');
         newItem.classList.add('result-item');
         newItem.setAttribute('data-original-text', value);
@@ -275,7 +288,7 @@ export default function decorate(block) {
         anchorTag.classList.add('list');
         anchorTag.setAttribute(
           'href',
-          'https://mosl-dev-upd--mosl-eds--motilal-oswal-amc.aem.live/mutual-fund/in/en/motilal-oswal-edge/article-details-list'
+          'https://mosl-dev-upd--mosl-eds--motilal-oswal-amc.aem.live/mutual-fund/in/en/motilal-oswal-edge/article-details-list',
         );
 
         anchorTag.textContent = value;
@@ -284,7 +297,15 @@ export default function decorate(block) {
         keySearchNewEle.appendChild(newItem);
       });
 
-      console.log("Titles Array:", titleAry);
+      console.log('Titles Array:', titleAry);
+    });
+
+    searchFld.addEventListener('focusout', () => {
+      if (searchFld.value.length !== 0) {
+        searchFld.classList.add('active');
+      } else {
+        searchFld.classList.remove('active');
+      }
     });
 
     // 👉 Click Selection
@@ -300,8 +321,6 @@ export default function decorate(block) {
       window.location.href = dataref;
       listContainer.classList.add('dsp-none');
     });
-
-
 
     // 👉 Filter Function
     const filterListItems = (searchTerm) => {
@@ -410,8 +429,6 @@ export default function decorate(block) {
       return event;
     });
 
-
-
     // 👉 Clear Button
     closeBtn.addEventListener('click', () => {
       searchFld.value = '';
@@ -421,9 +438,8 @@ export default function decorate(block) {
 
     // 👉 Keyboard Navigation
     searchFld.addEventListener('keydown', (event) => {
-      const visibleItems = () =>
-        Array.from(listContainer.querySelectorAll('.list'))
-          .filter((item) => item.parentElement.style.display !== 'none');
+      const visibleItems = () => Array.from(listContainer.querySelectorAll('.list'))
+        .filter((item) => item.parentElement.style.display !== 'none');
 
       switch (event.key) {
         case 'ArrowDown':
@@ -434,8 +450,7 @@ export default function decorate(block) {
 
         case 'ArrowUp':
           event.preventDefault();
-          currentFocusIndex =
-            (currentFocusIndex - 1 + visibleItems().length) % visibleItems().length;
+          currentFocusIndex = (currentFocusIndex - 1 + visibleItems().length) % visibleItems().length;
           updateActiveItem(visibleItems());
           break;
 
@@ -459,8 +474,6 @@ export default function decorate(block) {
       if (searchFld.value === '') closeBtn.style.display = 'none';
     }
   });
-
-
 
   // if(window.innerWidth <= 767){
   // const futureBuildingSection = document.querySelector('.future-building-container');
@@ -507,7 +520,4 @@ export default function decorate(block) {
   // }
   // Swiper(block, config);
   // return block;
-
-
-
 }

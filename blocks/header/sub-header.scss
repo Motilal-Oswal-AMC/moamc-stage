@@ -107,8 +107,12 @@ header .header.wealth-header {
             }
         }
 
+        nav {
+            max-width: 1232px;
+        }
 
         nav[aria-expanded='true'] {
+            max-width: 1232px;
             height: auto;
             display: flex;
             align-items: center;
