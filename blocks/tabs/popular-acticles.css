@@ -135,22 +135,22 @@
 .popular-artical .default-content-wrapper:last-of-type > ul li {
   min-width: 164px;
   display: flex;
-  height: 40px;
-  padding: var(--spacing-12);
+  height: 44px;
   justify-content: center;
   align-items: center;
   gap: var(--spacing-8);
-  border-radius: var(--border-radius-8);
   background: var(--button-primary-default);
+  border-radius: var(--border-radius-4);
 }
 @media (max-width: 768px) {
   .popular-artical .default-content-wrapper:last-of-type > ul li {
-    border-radius: var(--border-radius-8);
     height: 40px;
-    padding: 10px var(--spacing-12);
+    border-radius: var(--border-radius-8);
   }
 }
 .popular-artical .default-content-wrapper:last-of-type > ul li a {
+  border-radius: var(--border-radius-4);
+  padding: var(--spacing-12);
   width: 100%;
   background: var(--button-primary-default);
   color: var(--neutrals-white, #fff);
@@ -159,11 +159,13 @@
   font-family: var(--body);
   font-size: var(--body-medium-regular-size, 16px);
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   line-height: var(--body-medium-regular-line-height);
 }
 @media (max-width: 768px) {
   .popular-artical .default-content-wrapper:last-of-type > ul li a {
+    border-radius: var(--border-radius-8);
+    padding: var(--spacing-10) var(--spacing-12);
     font-weight: 500;
     font-size: var(--button-medium-size);
     line-height: var(--button-medium-line-height);
