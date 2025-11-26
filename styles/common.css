@@ -763,6 +763,7 @@ main > .section.previous-studies-tab.tabs-container .tab-dropdown-wrap .tab-drop
   overflow: unset;
   white-space: unset;
   text-align: left;
+  word-break: unset;
 }
 @media (max-width: 768px) {
   .prev-main-wrapper .co-branding-wrapper .comlist .button-container a.button {

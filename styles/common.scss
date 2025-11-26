@@ -717,6 +717,7 @@ main>.section.previous-studies-tab.tabs-container {
           overflow: unset;
           white-space: unset;
           text-align: left;
+          word-break: unset;
 
           @include media(mobile) {
             text-underline-offset: 2.4px;
