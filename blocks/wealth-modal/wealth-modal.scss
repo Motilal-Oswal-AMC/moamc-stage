@@ -137,11 +137,16 @@
         &.active,
         &:focus-within {
           .label {
-            top: -8px;
+            top: -10px;
             transform: unset;
             background-color: #fff;
             padding: 0 4px;
             z-index: 3;
+            font-size: 14px;
+
+            @include media(mobile) {
+              font-size: 12px;
+            }
           }
         }
 
