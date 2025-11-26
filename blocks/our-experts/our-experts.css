@@ -164,6 +164,11 @@
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub1:focus {
   border: 2px solid #2E2A94;
 }
+.section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub1 .icon.expert-lists1 {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+}
 .section.our-experts-container .our-experts-wrapper .our-experts-cont2 .our-expert-section1 .our-expert-sub2 {
   display: none;
 }
