@@ -2112,13 +2112,13 @@ main.nfo-nav .section.decoding-qglp-container.decoding-qglp-static .decoding-qgl
   }
 }
 
-.section.fund-text .fund-text-contain1 {
+.section.fund-tax .fund-tax-contain1 {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
 }
-.section.fund-text .fund-text-txt1 {
+.section.fund-tax .fund-tax-txt1 {
   color: var(--blue-1-800-primary);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-family: var(--TItle, Inter);
@@ -2128,7 +2128,7 @@ main.nfo-nav .section.decoding-qglp-container.decoding-qglp-static .decoding-qgl
   line-height: var(--spacing-32);
   /* 114.286% */
 }
-.section.fund-text .fund-text-txt2 {
+.section.fund-tax .fund-tax-txt2 {
   color: var(--neutrals-800);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-family: var(--Body, Inter);
