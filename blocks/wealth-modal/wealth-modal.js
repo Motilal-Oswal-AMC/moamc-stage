@@ -124,9 +124,9 @@ export default function decorate(block) {
   assocDrop.querySelectorAll('li').forEach((liarg) => {
     liarg.addEventListener('click', () => {
       const touchedFields = new Set();
-      formDropdownList.forEach((li) => {
-        li.setAttribute('aria-selected', 'false');
-        li.classList.remove('active');
+      formDropdownList.forEach((liinner) => {
+        liinner.setAttribute('aria-selected', 'false');
+        liinner.classList.remove('active');
       });
 
       liarg.setAttribute('aria-selected', 'true');
@@ -226,7 +226,9 @@ export default function decorate(block) {
     }
 
     if (inputarg.classList.contains('email-inp')) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // const emailRegex = /^(?=.{1,30}@)[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9.-]+\.[a-z]{2,}$/i;
+      const emailRegex = /^(?!.*\.\.)(?!.*\.$)(?!^\.)[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/;
       if (inputarg.value.trim() && !emailRegex.test(inputarg.value.trim())) {
         valid = false;
         emailError.textContent = 'Please enter a valid email.';
