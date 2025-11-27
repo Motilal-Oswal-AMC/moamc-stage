@@ -334,4 +334,19 @@ export default function decorate(block) {
 
   block.closest('.wealth-register')
     .classList.add('modal-show');
+
+  const thankYouScreen = document.querySelector('.modal-content .thank-you-screen');
+
+  if (thankYouScreen) {
+    dataMapMoObj.CLASS_PREFIXES = [
+      'thank-you-scr-cont',
+      'thank-you-scr-sec',
+      'thank-you-scr-sub',
+      'thank-you-scr-inner-text',
+      'thank-you-scr-list',
+      'thank-you-scr-list-content',
+    ];
+
+    dataMapMoObj.addIndexed(thankYouScreen);
+  }
 }
