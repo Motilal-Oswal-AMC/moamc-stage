@@ -937,7 +937,8 @@ main>.section.previous-studies-tab.tabs-container {
               scrollbar-color: transparent;
 
               @include media (mobile) {
-                bottom: 27px;
+                bottom: 150px;
+                top: unset;
                 left: unset;
                 right: -56px;
                 width: 170px;
