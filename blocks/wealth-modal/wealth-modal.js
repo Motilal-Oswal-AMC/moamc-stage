@@ -124,9 +124,9 @@ export default function decorate(block) {
   assocDrop.querySelectorAll('li').forEach((liarg) => {
     liarg.addEventListener('click', () => {
       const touchedFields = new Set();
-      formDropdownList.forEach((li) => {
-        li.setAttribute('aria-selected', 'false');
-        li.classList.remove('active');
+      formDropdownList.forEach((liinner) => {
+        liinner.setAttribute('aria-selected', 'false');
+        liinner.classList.remove('active');
       });
 
       liarg.setAttribute('aria-selected', 'true');
