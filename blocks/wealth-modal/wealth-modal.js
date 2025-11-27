@@ -283,6 +283,7 @@ export default function decorate(block) {
   });
 
   const mop = block.closest('main').querySelectorAll('.thank-you-screen p');
+  // eslint-disable-next-line prefer-destructuring
   dataMapMoObj.msgError = mop[1];
   dataMapMoObj.CLASS_PREFIXES = [
     'thank-you-scr-cont',
