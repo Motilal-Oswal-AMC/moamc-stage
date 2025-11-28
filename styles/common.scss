@@ -371,7 +371,7 @@ main .section.wcs-landing.section.embed-container {
       .cta1 {
         position: relative;
         display: flex;
-        gap: 12px;
+        gap: 0;
         align-items: center;
         justify-content: center;
         margin: 0;
@@ -397,11 +397,21 @@ main .section.wcs-landing.section.embed-container {
           border: none;
         }
 
-        .media1{
-          position: absolute;
-          top: 2px;
-          left: 132px;
-          font-size: 0.75em;
+        .media1 {
+          position: relative;
+          font-weight: inherit;
+          padding-left: 4px;
+          font-size: inherit;
+          line-height: inherit;
+          padding-right: 12px;
+          // top: 2px;
+          // left: 132px;
+          // font-size: 0.75em;
+
+          sup{
+            position: absolute;
+            top: -5px;
+          }
         }
       }
     }
@@ -640,6 +650,7 @@ main>.section.previous-studies-tab.tabs-container {
 }
 
 .default-content-wrapper.annual-wealth-wrap1 {
+
   h1,
   h2,
   h3,
