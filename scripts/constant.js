@@ -301,5 +301,51 @@ const dataMapMoObj = {
     // Return the number concatenated with the superscript suffix
     return `${n}<sup>${suffix}</sup>`;
   },
+  autoMaskEmail: (email) => {
+    if (!email) {
+      return 'Invalid email';
+    }
+
+    // 1. Separate the email into local part and domain
+    const atIndex = email.indexOf('@');
+    if (atIndex === -1) {
+      return email; // Not a valid email format
+    }
+
+    const localPart = email.substring(0, atIndex);
+    const domainPart = email.substring(atIndex);
+    const localLength = localPart.length;
+
+    // Handle very short usernames (1-3 characters) to always show at least one.
+    if (localLength <= 3) {
+      return localPart.substring(0, 1) + '*'.repeat(localLength - 1) + domainPart;
+    }
+
+    let percentageToMask = 0;
+
+    // 2. Decide the percentage based on length thresholds
+    if (localLength >= 11) {
+      // Long names: Mask 30% (Ensures 4+ visible chars)
+      percentageToMask = 30;
+    } else if (localLength >= 7) {
+      // Medium names: Mask 40% (Ensures 3+ visible chars)
+      percentageToMask = 40;
+    } else {
+      // Short names (4-6 chars): Mask 50% (Ensures 2+ visible chars)
+      percentageToMask = 50;
+    }
+
+    // 3. Apply the masking logic (similar to the previous function)
+    const charsToMask = Math.floor(localLength * (percentageToMask / 100));
+
+    // Calculate characters to keep, ensuring at least 1 character is always visible
+    const safeMask = Math.min(charsToMask, localLength - 1);
+    const charsToKeep = localLength - safeMask;
+
+    const visiblePart = localPart.substring(0, charsToKeep);
+    const maskedPart = '*'.repeat(safeMask);
+
+    return visiblePart + maskedPart + domainPart;
+  },
 };
 export default dataMapMoObj;

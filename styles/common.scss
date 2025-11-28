@@ -369,7 +369,9 @@ main .section.wcs-landing.section.embed-container {
       }
 
       .cta1 {
+        position: relative;
         display: flex;
+        gap: 12px;
         align-items: center;
         justify-content: center;
         margin: 0;
@@ -393,6 +395,13 @@ main .section.wcs-landing.section.embed-container {
           width: 100%;
           margin: 0 auto 28px;
           border: none;
+        }
+
+        .media1{
+          position: absolute;
+          top: 2px;
+          left: 132px;
+          font-size: 0.75em;
         }
       }
     }
@@ -1121,7 +1130,7 @@ main>.section.previous-studies-tab.tabs-container {
       line-height: var(--body-medium-semibold-line-height);
       margin: 0;
       border-radius: 8px;
-      background-color: #2c2a96;
+      // background-color: #2c2a96;
 
       @include media(mobile) {
         height: 160px;

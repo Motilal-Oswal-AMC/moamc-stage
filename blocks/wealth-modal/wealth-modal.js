@@ -222,7 +222,7 @@ export default function decorate(block) {
       const nameRegex = /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/;
       if (inputarg.value.trim() && !nameRegex.test(inputarg.value.trim())) {
         valid = false;
-        nameError.textContent = 'Only letters and spaces allowed.';
+        nameError.textContent = 'Please enter valid name.';
       } else nameError.textContent = '';
     }
 
@@ -371,7 +371,12 @@ export default function decorate(block) {
           block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           // alert
           dataMapMoObj.msgError.innerText = '';
-          dataMapMoObj.msgError.innerText = 'Your details have been submitted successfully!';
+          dataMapMoObj.msgError.innerText = 'Your request for report has been successfully  received.';
+          dataMapMoObj.texterr = block.closest('main')
+            .querySelector('.thank-you-screen .thank-you-scr-cont1 .thank-you-scr-sec3');
+          dataMapMoObj.texterr.style.display = 'block';
+          dataMapMoObj.texterr.textContent = '';
+          dataMapMoObj.texterr.textContent = `Reports will be shared via email at: ${dataMapMoObj.autoMaskEmail(emailInput.value)}`;
           // Reset form
           fields.forEach((f) => {
             f.value = '';
@@ -382,6 +387,7 @@ export default function decorate(block) {
           toggleSubmitButton();
           block.querySelector('.associated-drop .error-msg').textContent = '';
         } else {
+          block.closest('main').querySelectorAll('.thank-you-screen p')[2].style.display = 'none';
           block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           dataMapMoObj.msgError.innerText = '';
           dataMapMoObj.msgError.innerText = `Something went wrong: ${result.message || 'Unknown error'}`;
@@ -391,6 +397,7 @@ export default function decorate(block) {
       } catch (error) {
         // console.error('API Error:', error);
         block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
+        block.closest('main').querySelectorAll('.thank-you-screen p')[2].style.display = 'none';
         dataMapMoObj.msgError.innerText = '';
         dataMapMoObj.msgError.innerText = 'Failed to submit form. Please try again later.';
       }
