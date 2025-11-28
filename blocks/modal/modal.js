@@ -382,7 +382,7 @@ export function initializeModalHandlers() {
 
     // Media coverage page - Adding class to modal
     if (window.location.pathname.includes('/coverage')) {
-      if (!modal.querySelector('.embed')) {
+      if (modal.querySelector('.embed img')) {
         modal.classList.add('coverage-image-modal');
         if (!modal.querySelector('.modal-content .close-button')) {
           modal.querySelector('.modal-content').prepend(modal.querySelector('.close-button'));
