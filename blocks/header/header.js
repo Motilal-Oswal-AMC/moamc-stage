@@ -4,7 +4,7 @@ import dataMapMoObj from '../../scripts/constant.js';
 import dataCfObj from '../../scripts/dataCfObj.js';
 // import { loadAutoBlock } from '../../scripts/scripts.js';
 // import {a,button,div,h3,li,ul} from '../../scripts/dom-helpers.js';
-
+// yogesh bhai OG
 // media query match that indicates mobile/tablet width
 export const isDesktop = window.matchMedia('(min-width: 900px)');
 /**
@@ -111,7 +111,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
  * @param {Element} block The header block element
  */
 export default async function decorate(block) {
-  if (window.location.href.includes('/wealth-page')) {
+  if (window.location.href.includes('/wcs')) {
     block.classList.add('wealth-header');
   }
 
@@ -134,6 +134,9 @@ export default async function decorate(block) {
     nav.classList.remove('nfo-nav');
   }
 
+  if ([...block.classList].includes('wealth-header')) {
+    nav.classList.remove('nfo-nav');
+  }
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
@@ -178,7 +181,11 @@ export default async function decorate(block) {
 
       // Add the click event listener to redirect to the home page.
       container.addEventListener('click', () => {
-        window.location.href = 'https://mosldevexp--eds-cloud--rupeshdept.aem.live/mutual-fund/in/en/home-page';
+        if (window.location.href.includes('/wcs/')) {
+          window.location.href = `${window.location.origin}/wcs/in/en/wcs-landing-d`;
+        } else {
+          window.location.href = `${window.location.origin}/mutual-fund/in/en/home-page`;
+        }
       });
     });
   }
@@ -226,6 +233,8 @@ export default async function decorate(block) {
         const hrefnaf = navSection.querySelector('ul li');
         const frgnav = await loadFragment(hrefnaf.children[0].getAttribute('href'));
         hrefnaf.innerHTML = '';
+        // if (frgnav !== null) {
+        // }
         hrefnaf.append(frgnav.children[0]);
       }
 
@@ -681,23 +690,25 @@ export default async function decorate(block) {
   }
 
   const searchtemp = block.querySelector('.nav-tools .nav-tools-sec1 .nav-tools-inner-net1');
-  const iconcls = searchtemp.querySelector('.nav-tools-list-content1');
+  const iconcls = searchtemp !== null ? searchtemp.querySelector('.nav-tools-list-content1') : '';
   const navmain = block.closest('body');
   const navblk = navmain.querySelector('main');
   navblk.classList.add('nfo-nav');
-  iconcls.addEventListener('click', () => {
-    const nfoban = block.querySelector('.nfo-banner');
-    const navelement = block.querySelector('nav');
-    if (nfoban.style.display === 'none') {
-      nfoban.style.display = 'block';
-      navblk.classList.add('nfo-nav');
-      navelement.classList.add('nfo-nav');
-    } else {
-      nfoban.style.display = 'none';
-      navblk.classList.remove('nfo-nav');
-      navelement.classList.remove('nfo-nav');
-    }
-  });
+  if (iconcls !== '') {
+    iconcls.addEventListener('click', () => {
+      const nfoban = block.querySelector('.nfo-banner');
+      const navelement = block.querySelector('nav');
+      if (nfoban.style.display === 'none') {
+        nfoban.style.display = 'block';
+        navblk.classList.add('nfo-nav');
+        navelement.classList.add('nfo-nav');
+      } else {
+        nfoban.style.display = 'none';
+        navblk.classList.remove('nfo-nav');
+        navelement.classList.remove('nfo-nav');
+      }
+    });
+  }
 
   const loginevent = block.querySelector('.nav-tools .nav-tools-sub4');// .nav-tools-inner-net1');
   loginevent.addEventListener('click', () => {
@@ -742,7 +753,7 @@ export default async function decorate(block) {
         dropdownMenu.classList.remove('open');
       }
     } catch (error) {
-      console.error('Error in scroll event handler:', error);
+      // console.error('Error in scroll event handler:', error);
     }
   });
 

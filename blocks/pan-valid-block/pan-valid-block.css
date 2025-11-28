@@ -609,7 +609,7 @@
   height: 24px;
 }
 .section.otp-fdp .otp-container .modal-cross-btn .sub-otp-con1,
-.section.otp-fdp .otp-container .modal-cross-btn .sub-otp-con1 .icon {
+.section.otp-fdp .otp-container .modal-cross-btn .sub-otp-con1 .icon.icon-modal-cross-btn {
   margin: 0;
   width: 100%;
   height: 100%;
@@ -633,7 +633,7 @@
     margin: 0 0 var(--spacing-24);
   }
 }
-.section.otp-fdp .otp-container .pan-wrap .pan-field {
+.section.otp-fdp .otp-container .pan-wrap .pan-field.comlist {
   position: relative;
   padding: var(--spacing-8) var(--spacing-12);
   border-radius: var(--border-radius-8, 8px);
@@ -641,7 +641,7 @@
   line-height: 0;
   margin: 0 0 var(--spacing-8);
 }
-.section.otp-fdp .otp-container .pan-wrap .pan-field .pan-label {
+.section.otp-fdp .otp-container .pan-wrap .pan-field.comlist .pan-label.comlist {
   position: absolute;
   top: 50%;
   left: 10px;
@@ -657,12 +657,12 @@
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .section.otp-fdp .otp-container .pan-wrap .pan-field .pan-label {
+  .section.otp-fdp .otp-container .pan-wrap .pan-field.comlist .pan-label.comlist {
     font-size: var(--label-small-size);
     line-height: var(--label-small-line-height);
   }
 }
-.section.otp-fdp .otp-container .pan-wrap .pan-field .pan-inp {
+.section.otp-fdp .otp-container .pan-wrap .pan-field.comlist .pan-inp.comlist {
   border: none;
   outline: none;
   background-color: transparent;
@@ -677,12 +677,12 @@
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .section.otp-fdp .otp-container .pan-wrap .pan-field .pan-inp {
+  .section.otp-fdp .otp-container .pan-wrap .pan-field.comlist .pan-inp.comlist {
     font-size: var(--body-medium-regular-size);
     line-height: var(--body-medium-regular-line-height);
   }
 }
-.section.otp-fdp .otp-container .pan-wrap .pan-field:focus-within .pan-label, .section.otp-fdp .otp-container .pan-wrap .pan-field.active .pan-label {
+.section.otp-fdp .otp-container .pan-wrap .pan-field.comlist:focus-within .pan-label.comlist, .section.otp-fdp .otp-container .pan-wrap .pan-field.comlist.active .pan-label.comlist {
   top: -8px;
   transform: unset;
   z-index: 2;
@@ -779,7 +779,7 @@
 .section.otp-fdp .otp-container .otp-wrap .otp-field.otp-success ~ .resend-btn {
   display: none;
 }
-.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap {
+.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap.comlist {
   width: 40px;
   height: 40px;
   border-radius: var(--border-radius-8);
@@ -789,13 +789,13 @@
   align-items: center;
   justify-content: center;
 }
-.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap:focus-within {
+.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap.comlist:focus-within {
   border: var(--border-width-02) solid var(--strokes-typing);
 }
-.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap:focus-within .otp-inp {
+.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap.comlist:focus-within .otp-inp {
   caret-color: var(--strokes-typing);
 }
-.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap .otp-inp {
+.section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap.comlist .otp-inp.comlist {
   width: 100%;
   height: 100%;
   border: none;
@@ -809,12 +809,12 @@
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap .otp-inp {
+  .section.otp-fdp .otp-container .otp-wrap .otp-field .otp-wrap.comlist .otp-inp.comlist {
     font-size: var(--body-xlarge-semibold-size);
     line-height: var(--body-xlarge-semibold-line-height);
   }
 }
-.section.otp-fdp .otp-container .otp-wrap .resend-btn {
+.section.otp-fdp .otp-container .otp-wrap .resend-btn.comlist {
   margin: 0 0 var(--spacing-36);
   padding: var(--spacing-8) 0;
   border-radius: 0;
@@ -830,7 +830,7 @@
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .section.otp-fdp .otp-container .otp-wrap .resend-btn {
+  .section.otp-fdp .otp-container .otp-wrap .resend-btn.comlist {
     padding: 0;
     margin: 0 0 12px;
     font-size: var(--text-link-small-size);
@@ -973,7 +973,7 @@
   cursor: pointer;
 }
 .section.reset-passcode .reset-passcode-container .modal-cross-wrap .innerpasscode1,
-.section.reset-passcode .reset-passcode-container .modal-cross-wrap .innerpasscode1 .icon {
+.section.reset-passcode .reset-passcode-container .modal-cross-wrap .innerpasscode1 .icon.icon-modal-cross-btn {
   margin: 0;
   width: 24px;
   height: 24px;
@@ -1070,7 +1070,7 @@
   justify-content: center;
   align-items: center;
 }
-.section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .otp-field-wrap .otp-wrap .otp-inp {
+.section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .otp-field-wrap .otp-wrap .otp-inp.comlist {
   width: 100%;
   height: 100%;
   border: none;
@@ -1084,7 +1084,7 @@
   font-weight: 600;
 }
 @media (max-width: 768px) {
-  .section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .otp-field-wrap .otp-wrap .otp-inp {
+  .section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .otp-field-wrap .otp-wrap .otp-inp.comlist {
     font-size: var(--body-xlarge-semibold-size);
     line-height: var(--body-xlarge-semibold-line-height);
   }
@@ -1107,7 +1107,7 @@
 .section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .otp-field-wrap.otp-success ~ .otp-msg {
   display: none;
 }
-.section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .resend-btn {
+.section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .resend-btn.comlist {
   text-decoration: underline;
   text-underline-offset: 2.8px;
   background-color: transparent;
@@ -1126,7 +1126,7 @@
   font-weight: 400;
 }
 @media (max-width: 768px) {
-  .section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .resend-btn {
+  .section.reset-passcode .reset-passcode-container .reset-otp-wrap .input-resend-wrap .resend-btn.comlist {
     font-size: var(--text-link-small-size);
     line-height: var(--text-link-small-line-height);
     padding: 0;
