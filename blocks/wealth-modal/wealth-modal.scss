@@ -192,10 +192,10 @@
           position: absolute;
           left: 12px;
           top: 5px;
-          margin-top: 3px;
 
           @include media(mobile) {
             top: 7px;
+            margin-top: 3px;
           }
 
           .icon-national-flag {
