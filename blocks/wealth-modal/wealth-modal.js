@@ -3,16 +3,7 @@ import {
   div, ul, li, p, input, label, button, img,
 } from '../../scripts/dom-helpers.js';
 import { myAPI, generateAppId } from '../../scripts/scripts.js';
-import { createModal } from '../modal/modal.js';
 
-async function popup(param) {
-  // Create NEW container for the modal
-  const videoContainer = document.createElement('div');
-  videoContainer.append(param);
-  // Open Modal
-  const { showModal } = await createModal([videoContainer]);
-  showModal();
-}
 export default function decorate(block) {
   const wealthModalData = Array.from(block.children);
   const wealthModal = wealthModalData[0];
@@ -111,12 +102,16 @@ export default function decorate(block) {
   const assocDrop = assocDiv.querySelector('.assoc-drop');
   const arrow = assocDiv.querySelector('.dropdown-arrow');
   const formDropdownList = assocDiv.querySelectorAll('.assoc-drop li');
-  const labelevent = wealthModal.querySelector('.associated-label');
+  const labelevent = wealthModal.querySelector('.associated-drop');
 
   function toggleDropdown(e) {
     e.stopPropagation();
+    if (e.target.closest('ul')) {
+      return false;
+    }
     assocDiv.classList.toggle('active');
     assocDrop.classList.toggle('open');
+    return e;
   }
 
   assocInput.addEventListener('click', toggleDropdown);
@@ -224,7 +219,7 @@ export default function decorate(block) {
     let valid = true;
 
     if (inputarg.classList.contains('name-inp')) {
-      const nameRegex = /^[a-zA-Z\s]*$/;
+      const nameRegex = /^[A-Za-z]+(?:[ '-][A-Za-z]+)*$/;
       if (inputarg.value.trim() && !nameRegex.test(inputarg.value.trim())) {
         valid = false;
         nameError.textContent = 'Only letters and spaces allowed.';
@@ -237,6 +232,9 @@ export default function decorate(block) {
       const emailRegex = /^(?!.*\.\.)(?!.*\.$)(?!^\.)[a-zA-Z0-9]+(?:[._-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:[-.][a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/;
       if (inputarg.value.trim() && !emailRegex.test(inputarg.value.trim())) {
         valid = false;
+        const act = inputarg.closest('.ragis-lab-btn').querySelector('.btn-mand .btn');
+        act.classList.remove('active');
+        act.setAttribute('disabled', true);
         emailError.textContent = 'Please enter a valid email.';
       } else emailError.textContent = '';
     }
@@ -246,6 +244,9 @@ export default function decorate(block) {
       if (inputarg.value.trim() && !phoneRegex.test(inputarg.value.trim())) {
         valid = false;
         phoneError.textContent = 'Enter a valid 10-digit Indian number.';
+        const act = inputarg.closest('.ragis-lab-btn').querySelector('.btn-mand .btn');
+        act.classList.remove('active');
+        act.setAttribute('disabled', true);
       } else phoneError.textContent = '';
     }
 
@@ -253,6 +254,9 @@ export default function decorate(block) {
       if (!inputarg.value.trim()) {
         valid = false;
         assocError.textContent = 'Please select an association.';
+        const act = inputarg.closest('.ragis-lab-btn').querySelector('.btn-mand .btn');
+        act.classList.remove('active');
+        act.setAttribute('disabled', true);
       } else assocError.textContent = '';
     }
     inputarg.classList.toggle('error', !valid && inputarg.value.trim() !== '');
@@ -325,6 +329,7 @@ export default function decorate(block) {
           'Content-Type': 'application/json',
           'X-Encrypted': 'N',
           appid: generateAppId(),
+          'X-Lead-Encrypted': 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
         };
 
         let response;
@@ -362,7 +367,7 @@ export default function decorate(block) {
         const result = await response; // .json();
         // console.log('API Response:', result);
 
-        if (result) {
+        if (result.code !== 400) {
           block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           // alert
           dataMapMoObj.msgError.innerText = '';

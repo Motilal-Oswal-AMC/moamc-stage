@@ -339,15 +339,22 @@ export async function myAPI(method, url, body = null, customHeaders = {}) {
 
   // 4. Assign the sanitized headers object to options
   options.headers = headers;
-
-  const response = await fetch(url, options);
-
-  if (!response.ok) throw new Error(`Request failed: ${response.status}`);
-  const text = await response.text();
+  let textResp;
   try {
-    return JSON.parse(text);
-  } catch (e) {
-    return text;
+    const response = await fetch(url, options);
+    if (response.status === 400) {
+      textResp = await response.text();
+    }
+    // if (!response.ok) throw new Error(`Request failed: ${response.status}`);
+    const text = await response.text();
+    textResp = text;
+    try {
+      return JSON.parse(text);
+    } catch (e) {
+      return text;
+    }
+  } catch (error) {
+    return JSON.parse(textResp);
   }
 }
 
