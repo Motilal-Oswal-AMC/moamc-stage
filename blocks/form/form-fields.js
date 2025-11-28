@@ -1,4 +1,4 @@
-/*    */
+/* code check   */
 import { toClassName } from '../../scripts/aem.js';
 
 function createFieldWrapper(fd) {

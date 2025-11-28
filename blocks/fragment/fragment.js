@@ -5,6 +5,8 @@
  * https://www.aem.live/developer/block-collection/fragment
  */
 
+console.log("code check");
+
 // eslint-disable-next-line import/no-cycle
 import {
   decorateMain,
