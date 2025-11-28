@@ -14,9 +14,6 @@ async function popup(param) {
   showModal();
 }
 export default function decorate(block) {
-  const delay = (ms) => new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
   const wealthModalData = Array.from(block.children);
   const wealthModal = wealthModalData[0];
 
@@ -213,13 +210,10 @@ export default function decorate(block) {
     };
   }
 
-  delay(800).then(() => {
-    const thankYouScreen = document.querySelector('.modal-content .thank-you-screen');
-
-    if (thankYouScreen) {
-
-    }
-  });
+  // delay(800).then(() => {
+  //   const thankYouScreen = document.querySelector('.modal-content .thank-you-screen');
+  //   if (thankYouScreen) {}
+  // });
   async function validateField(inputarg) {
     const nameError = wealthModal.querySelector('.name-error');
     const emailError = wealthModal.querySelector('.email-error');
@@ -296,6 +290,16 @@ export default function decorate(block) {
 
   dataMapMoObj.addIndexed(block.closest('main').querySelector('.thank-you-screen'));
   block.closest('main').querySelectorAll('.thank-you-screen p')[2].style.display = 'none';
+  const moclosse = block.closest('main').querySelector('.thank-you-screen');
+  if (moclosse.querySelector('.thank-you-scr-sec5 img') !== null) {
+    moclosse.querySelector('.thank-you-scr-sec5 img').addEventListener('click', () => {
+      moclosse.style.display = 'none';
+    });
+  }
+  moclosse.querySelector('.thank-you-scr-sec4 a').removeAttribute('href');
+  moclosse.querySelector('.thank-you-scr-sec4').addEventListener('click', () => {
+    moclosse.style.display = 'none';
+  });
   submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     fields.forEach((f) => touchedFields.add(f));
@@ -321,17 +325,43 @@ export default function decorate(block) {
           appid: generateAppId(),
         };
 
-        const response = await myAPI(
-          'POST',
-          'https://mf.moamc.com/ums/api/SaveLead/create-leads',
-          objreq,
-          headers,
-        );
+        let response;
+        if (window.location.href.includes('https://stage.motilaloswalwcs.com/')) {
+          response = await myAPI(
+            'POST',
+            'https://www.motilaloswalmf.com/ums/api/SaveLead/create-leads',
+            objreq,
+            headers,
+          );
+        } else if (window.location.href.includes('motilal-oswal-amc.aem.live')) {
+          response = await myAPI(
+            'POST',
+            // 'https://www.motilaloswalmf.com/ums/api/SaveLead/create-leads',
+            'https://mf.moamc.com/ums/api/SaveLead/create-leads',
+            objreq,
+            headers,
+          );
+        } else if (window.location.href.includes('https://www.motilaloswalwcs.com/')) {
+          response = await myAPI(
+            'POST',
+            'https://www.motilaloswalmf.com/ums/api/SaveLead/create-leads',
+            objreq,
+            headers,
+          );
+        } else {
+          response = await myAPI(
+            'POST',
+            'https://www.motilaloswalmf.com/ums/api/SaveLead/create-leads',
+            objreq,
+            headers,
+          );
+        }
 
         const result = await response; // .json();
         // console.log('API Response:', result);
 
         if (result) {
+          block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           // alert
           dataMapMoObj.msgError.innerText = '';
           dataMapMoObj.msgError.innerText = 'Your details have been submitted successfully!';
@@ -345,6 +375,7 @@ export default function decorate(block) {
           toggleSubmitButton();
           block.querySelector('.associated-drop .error-msg').textContent = '';
         } else {
+          block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           dataMapMoObj.msgError.innerText = '';
           dataMapMoObj.msgError.innerText = `Something went wrong: ${result.message || 'Unknown error'}`;
           // alert
@@ -352,12 +383,21 @@ export default function decorate(block) {
         }
       } catch (error) {
         // console.error('API Error:', error);
+        block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
         dataMapMoObj.msgError.innerText = '';
         dataMapMoObj.msgError.innerText = 'Failed to submit form. Please try again later.';
       }
     } else {
       toggleSubmitButton();
     }
+    // const closeElements = modal.querySelectorAll('.thank-you-scr-sec4');
+    // closeElements.forEach((el) => {
+    //   el.addEventListener('click', () => {
+    //     modal.remove();
+    //   });
+    // });
+
+    // document.body.append(modal);
   });
 
   block.closest('.wealth-register')
