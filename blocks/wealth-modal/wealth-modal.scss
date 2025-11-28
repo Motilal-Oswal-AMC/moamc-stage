@@ -33,7 +33,7 @@
       .cross-btn {
         position: absolute;
         top: 12px;
-        right: 14px;
+        right: 12px;
         width: 24px;
         height: 24px;
         cursor: pointer;
@@ -397,7 +397,7 @@
         margin-top: 20px;
 
         @include media(mobile) {
-          margin-top: 8px;
+          margin-top: 0;
         }
 
         p {
@@ -411,8 +411,9 @@
 
       >.ragis-lab-btn {
         >.rag-lable {
-          margin-bottom: 24px;
-          margin-top: 12px;
+          // margin-bottom: 24px;
+          // margin-top: 12px;
+          margin: 0 0 24px;
           font-size: var(--paragraph-large-regular-size);
         }
 
@@ -425,6 +426,11 @@
         position: fixed;
         bottom: 0;
         z-index: 11;
+        width: 100%;
+        max-height: 508px;
+        height: 100%;
+        border-radius: 32px 32px 0 0;
+        padding: 48px 16px 32px;
       }
     }
   }
