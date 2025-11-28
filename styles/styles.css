@@ -106,7 +106,7 @@ body,
 body {
     display: none;
     margin: 0;
-    background-color: blueviolet;
+    background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--body-font-family);
     font-size: var(--body-font-size-m);
