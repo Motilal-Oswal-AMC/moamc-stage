@@ -111,6 +111,7 @@ export default function decorate(block) {
   const assocDrop = assocDiv.querySelector('.assoc-drop');
   const arrow = assocDiv.querySelector('.dropdown-arrow');
   const formDropdownList = assocDiv.querySelectorAll('.assoc-drop li');
+  const labelevent = wealthModal.querySelector('.associated-label');
 
   function toggleDropdown(e) {
     e.stopPropagation();
@@ -120,6 +121,7 @@ export default function decorate(block) {
 
   assocInput.addEventListener('click', toggleDropdown);
   arrow.addEventListener('click', toggleDropdown);
+  labelevent.addEventListener('click', toggleDropdown);
 
   assocDrop.querySelectorAll('li').forEach((liarg) => {
     liarg.addEventListener('click', () => {
