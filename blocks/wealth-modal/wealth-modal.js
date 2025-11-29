@@ -376,7 +376,7 @@ export default function decorate(block) {
             .querySelector('.thank-you-screen .thank-you-scr-cont1 .thank-you-scr-sec3');
           dataMapMoObj.texterr.style.display = 'block';
           dataMapMoObj.texterr.textContent = '';
-          dataMapMoObj.texterr.textContent = `Reports will be shared via email at: ${dataMapMoObj.autoMaskEmail(emailInput.value)}`;
+          dataMapMoObj.texterr.textContent = `Reports will be shared via email at ${dataMapMoObj.autoMaskEmail(emailInput.value)}`;
           // Reset form
           fields.forEach((f) => {
             f.value = '';
