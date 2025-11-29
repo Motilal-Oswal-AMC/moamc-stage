@@ -371,12 +371,12 @@ export default function decorate(block) {
           block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
           // alert
           dataMapMoObj.msgError.innerText = '';
-          dataMapMoObj.msgError.innerText = 'Your request for report has been successfully  received.';
+          dataMapMoObj.msgError.innerText = ' Thank You for Registering for the Wealth Creation Study';
           dataMapMoObj.texterr = block.closest('main')
             .querySelector('.thank-you-screen .thank-you-scr-cont1 .thank-you-scr-sec3');
           dataMapMoObj.texterr.style.display = 'block';
           dataMapMoObj.texterr.textContent = '';
-          dataMapMoObj.texterr.textContent = `Reports will be shared via email at ${dataMapMoObj.autoMaskEmail(emailInput.value)}`;
+          dataMapMoObj.texterr.textContent = 'Someone from our team will contact you with further details';
           // Reset form
           fields.forEach((f) => {
             f.value = '';
