@@ -336,7 +336,8 @@
         .country-drop {
           // width: 37.1%;
           width: 100%;
-          max-width: 112px;
+          max-width: 90px;
+          // max-width: 112px;
 
           .cont-label {
             position: absolute;
@@ -351,6 +352,7 @@
             font-weight: 400;
 
             &::after {
+              display: none;
               content: "";
               background-image: url('/icons/arrow-down-black.svg');
               width: 20px;
