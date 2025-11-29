@@ -409,6 +409,10 @@ export default function decorate(block) {
           // block.querySelector('.btn-mand .btn').classList.remove('active');
           toggleSubmitButton();
           block.querySelector('.associated-drop .error-msg').textContent = '';
+          assocDrop.querySelectorAll('li').forEach((arg) => {
+            arg.setAttribute('aria-selected', 'false');
+            arg.classList.remove('active');
+          });
         } else {
           block.closest('main').querySelectorAll('.thank-you-screen p')[2].style.display = 'none';
           block.closest('main').querySelector('.thank-you-screen').style.display = 'flex';
