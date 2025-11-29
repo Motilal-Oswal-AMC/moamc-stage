@@ -203,7 +203,7 @@ export default function decorate(block) {
     }
   }
   const data = block.closest('main');
-  if (data !== null && window.location.href.includes('/coverage')) {
+  if (data !== null && (window.location.href.includes('/media-coverage') || window.location.href.includes('/coverage'))) {
     if (!data.querySelector('.maintab')) {
       const subdata = data.querySelectorAll('.section');
       if (dataMapMoObj.objdata === undefined) {
@@ -280,7 +280,7 @@ export default function decorate(block) {
         // var pPostval = selectedLabelTab.split(' ')[1]
         const pPostval = selectedLabelTab.split(' ').slice(1).join(' ');
 
-        if (window.location.pathname.includes('/coverage')) {
+        if (window.location.pathname.includes('/media-coverage') || window.location.pathname.includes('/coverage')) {
           const tableMain = div(
             { class: 'coverage-table-container' },
             // p({ class: 'studytab-title' }, selectedLabelTab),
