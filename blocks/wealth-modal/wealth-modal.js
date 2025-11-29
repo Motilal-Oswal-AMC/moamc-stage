@@ -306,6 +306,29 @@ export default function decorate(block) {
   moclosse.querySelector('.thank-you-scr-sec4').addEventListener('click', () => {
     moclosse.style.display = 'none';
   });
+  async function getPublicIpId() {
+    try {
+    // API service that returns the public IP address
+      const response = await fetch('https://api.ipify.org?format=json');
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      // data.ip will contain your public IPv4 address
+      return data.ip;
+    } catch (error) {
+      console.error('Failed to retrieve Public IP:', error);
+      return 'Error: Could not get IP.';
+    }
+  }
+
+  getPublicIpId().then((publicIP) => {
+    console.log('Your Public IP/Network ID:', publicIP);
+    dataMapMoObj.ipId = publicIP;
+  });
   submitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     fields.forEach((f) => touchedFields.add(f));
@@ -318,10 +341,10 @@ export default function decorate(block) {
           email: emailInput.value.trim(),
           state: 'MH',
           city: 'M',
-          customField01: 'NULL',
-          customField02: 'NULL',
+          customField01: 'WCS-2025',
+          customField02: wealthModal.querySelector('.associated-inp').value,//'NULL',
           customField03: 'NULL',
-          userIp: '156.67.260.62',
+          userIp: dataMapMoObj.ipId, //'156.67.260.62',
           type: 'other',
           code: 'NA',
         };
