@@ -34,10 +34,13 @@
   }
 
   .wealth-modal-wrapper {
-    padding: 48px 16px 32px;
     height: 100%;
     overflow: hidden auto;
     scrollbar-width: none;
+    
+    @include media(mobile){
+      padding: 48px 16px 32px;
+    }
 
     &::-webkit-scrollbar {
       width: 2px;
@@ -121,7 +124,7 @@
           }
 
           &.filled {
-            top: -8px;
+            top: -10px;
             transform: unset;
             background-color: #fff;
             padding: 0 4px;
@@ -492,6 +495,7 @@
     display: flex;
     justify-content: end;
     padding-right: 0;
+    overflow: hidden;
   }
 }
 

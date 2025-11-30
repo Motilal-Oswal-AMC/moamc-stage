@@ -150,23 +150,40 @@ export default function decorate(block) {
 
   const closeIcon = wealthModal.querySelector('.icon-modal-cross-btn');
 
+  const delay = (ms) => new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
   if (closeIcon) {
-    closeIcon.addEventListener('click', () => {
-      const dialogEl = block.closest('dialog');
-      if (dialogEl && dialogEl.hasAttribute('open')) {
-        dialogEl.close();
-        return;
-      }
+    closeIcon.addEventListener('click', async () => {
+      // const dialogEl = block.closest('dialog');
       const modalSection = block.closest('.wealth-register');
       if (modalSection) {
-        modalSection.classList.remove('modal-show');
-        modalSection.style.display = 'none';
+        const card2 = document.querySelector('main');
+        const classAddv12 = card2.querySelector('.wealth-modal-container');
+        if (Array.from(classAddv12.classList).includes('hide-modal')) {
+          classAddv12.classList.remove('hide-modal');
+        }
+        classAddv12.classList.add('hide-modal');
+        classAddv12.classList.remove('modal-show');
+        // }
+        document.body.classList.remove('noscroll');
+        card2.classList.remove('modal-active-parent');
+
+        const closestParam = document.querySelector('main');
+        await delay(1200);
+        // closestParam.querySelector('.modal-content').remove();
+        const bodym = document.querySelector('body');
+        bodym.classList.remove('modal-open');
+        bodym.classList.remove('noscroll');
+        closestParam.querySelector('.modal').remove();
+        // modalSection.classList.remove('modal-show');
+        // modalSection.style.display = 'none';
       }
     });
   }
 
-  const crossButton = wealthModal.querySelector('.cross-btn');
-  crossButton.addEventListener('click', () => wealthModal.remove());
+  // const crossButton = wealthModal.querySelector('.cross-btn');
+  // crossButton.addEventListener('click', () => wealthModal.remove());
 
   const nameInput = wealthModal.querySelector('.name-inp');
   const emailInput = wealthModal.querySelector('.email-inp');
@@ -342,11 +359,11 @@ export default function decorate(block) {
           state: '',
           city: '',
           customField01: 'WCS-2025',
-          customField02: wealthModal.querySelector('.associated-inp').value,//'NULL',
+          customField02: wealthModal.querySelector('.associated-inp').value, // 'NULL',
           customField03: '',
-          userIp: dataMapMoObj.ipId, //'156.67.260.62',
-          type: '',//'other',
-          code: '',//'NA',
+          userIp: dataMapMoObj.ipId, // '156.67.260.62',
+          type: '', // 'other',
+          code: '', // 'NA',
         };
         const headers = {
           'Content-Type': 'application/json',
